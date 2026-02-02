@@ -1,0 +1,26 @@
+@import "tailwindcss";
+@config "../tailwind.config.js";
+
+@theme {
+    --color-primary: #0b3d5b;
+    --color-secondary: #64748b;
+    --color-accent: #f59e0b;
+    --color-dark: #1e293b;
+    --color-light: #f8fafc;
+    --font-heading: 'Inter', sans-serif;
+    --font-body: 'Inter', sans-serif;
+}
+
+@layer components {
+    .container-custom {
+        @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+    }
+
+    .btn-primary {
+        @apply bg-[var(--color-primary)] hover:opacity-90 text-white font-bold py-3 px-8 rounded transition duration-300 ease-in-out transform hover:-translate-y-1 shadow-lg;
+    }
+
+    .section-title {
+        @apply text-3xl md:text-4xl font-bold text-gray-900 mb-4 font-heading;
+    }
+}

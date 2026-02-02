@@ -1,0 +1,1126 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jeet Badki | Civil Engineer & InfraToday Founder</title>
+  <meta name="description"
+    content="Portfolio of Jeet Badki, a visionary Civil Engineer and founder of InfraToday. Specializing in high-performance infrastructure and sustainable urban development." />
+  <link href="./dist/output.css" rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Oswald:wght@400;500;700&display=swap"
+    rel="stylesheet" />
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- Subresource Integrity can be added for CDNs if used later -->
+</head>
+
+<body class="bg-gray-50 text-gray-800 font-body antialiased selection:bg-primary selection:text-white">
+  <!-- Navigation -->
+  <header
+    class="fixed w-full z-50 transition-all duration-300 bg-white/90 dark:bg-slate-900/90 backdrop-blur-md shadow-sm"
+    id="navbar">
+    <div class="container-custom py-4 flex justify-between items-center relative">
+      <a href="#" class="text-2xl font-bold text-primary dark:text-sky-400 font-heading tracking-tight">Jeet Badki<span
+          class="text-accent">.</span></a>
+
+      <!-- Centered Navigation -->
+      <nav class="hidden md:flex absolute left-1/2 transform -translate-x-1/2 space-x-6 items-center">
+        <a href="#about"
+          class="text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-white font-medium transition">About</a>
+        <a href="#skills"
+          class="text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-white font-medium transition">Expertise</a>
+        <a href="#projects"
+          class="text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-white font-medium transition">Projects</a>
+        <a href="#infratoday"
+          class="text-gray-600 dark:text-gray-300 font-semibold hover:text-accent transition">InfraToday</a>
+        <a href="#contact"
+          class="text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-white font-medium transition">Contact</a>
+      </nav>
+
+      <!-- Right Side Actions -->
+      <div class="flex items-center space-x-4">
+        <a href="#contact"
+          class="hidden md:block border border-primary text-primary hover:bg-primary hover:text-white dark:border-white dark:text-white dark:hover:bg-white dark:hover:text-primary px-5 py-2 rounded-full font-medium transition duration-300">Get
+          in Touch</a>
+
+        <!-- Dark Mode Toggle -->
+        <button id="theme-toggle"
+          class="hidden md:block p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition text-gray-600 dark:text-gray-300 focus:outline-none"
+          aria-label="Toggle Dark Mode">
+          <!-- Sun Icon -->
+          <svg id="theme-toggle-light-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+            <path
+              d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 100 2h1z"
+              fill-rule="evenodd" clip-rule="evenodd"></path>
+          </svg>
+          <!-- Moon Icon -->
+          <svg id="theme-toggle-dark-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+            <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
+          </svg>
+        </button>
+      </div>
+
+      <!-- Mobile Menu Button -->
+      <button id="menu-btn" class="md:hidden text-gray-700 focus:outline-none" aria-label="Toggle Menu">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </button>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu"
+      class="hidden md:hidden bg-white border-t border-gray-100 absolute top-full left-0 w-full shadow-lg">
+      <div class="container-custom flex flex-col space-y-4 py-4">
+        <a href="#about" class="text-gray-600 hover:text-primary font-medium transition block">About</a>
+        <a href="#skills" class="text-gray-600 hover:text-primary font-medium transition block">Expertise</a>
+        <a href="#projects" class="text-gray-600 hover:text-primary font-medium transition block">Projects</a>
+        <a href="#infratoday" class="text-primary font-semibold hover:text-accent transition block">InfraToday</a>
+        <a href="#contact" class="text-gray-600 hover:text-primary font-medium transition block">Contact</a>
+        <a href="#contact" class="btn-primary text-center block w-full mt-2">Get in Touch</a>
+        <!-- Dark Mode Toggle for Mobile -->
+        <button id="theme-toggle-mobile"
+          class="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition text-gray-600 dark:text-gray-300 focus:outline-none mx-auto"
+          aria-label="Toggle Dark Mode">
+          <!-- Sun Icon -->
+          <svg id="theme-toggle-light-icon-mobile" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+            <path
+              d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 100 2h1z"
+              fill-rule="evenodd" clip-rule="evenodd"></path>
+          </svg>
+          <!-- Moon Icon -->
+          <svg id="theme-toggle-dark-icon-mobile" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+            <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section id="hero"
+      class="relative min-h-screen flex items-center pt-32 pb-20 md:pt-48 md:pb-32 overflow-hidden bg-slate-900 transition-colors duration-300">
+      <!-- Hero Slider Background -->
+      <div id="hero-slider" class="absolute inset-0 z-0">
+        <div
+          class="absolute inset-0 bg-cover bg-center transition-all duration-[3000ms] ease-in-out opacity-100 scale-100"
+          style="background-image: url(&quot;assets/hero/hero_bg_1.jpg&quot;)"></div>
+        <div
+          class="absolute inset-0 bg-cover bg-center transition-all duration-[3000ms] ease-in-out opacity-0 scale-100"
+          style="background-image: url(&quot;assets/hero/hero_bg_2.jpg&quot;)"></div>
+        <div
+          class="absolute inset-0 bg-cover bg-center transition-all duration-[3000ms] ease-in-out opacity-0 scale-100"
+          style="background-image: url(&quot;assets/hero/hero_bg_3.jpg&quot;)"></div>
+      </div>
+
+      <!-- Overlay with Premium Gradients -->
+      <div
+        class="absolute inset-0 z-[1] bg-gradient-to-b from-slate-900/80 via-slate-900/60 to-slate-900/90 backdrop-blur-[4px]">
+      </div>
+
+      <!-- Decorative Grid/Blueprint Overlay -->
+      <div class="absolute inset-0 z-[1] opacity-20 pointer-events-none"
+        style="background-image: radial-gradient(#64748b 1px, transparent 1px); background-size: 32px 32px;"></div>
+
+      <!-- Decorative Elements -->
+      <div class="absolute top-20 right-0 w-1/3 h-1/3 bg-blue-500/20 rounded-full blur-[100px] z-[0]"></div>
+      <div class="absolute bottom-0 left-0 w-1/4 h-1/4 bg-amber-500/10 rounded-full blur-[100px] z-[0]"></div>
+
+      <div class="container-custom relative z-10 text-center">
+        <div class="max-w-4xl mx-auto space-y-8 reveal">
+          <div
+            class="inline-block px-4 py-1.5 bg-slate-800/80 backdrop-blur-md text-amber-400 text-sm font-mono tracking-widest uppercase font-semibold rounded-full border border-slate-700 shadow-lg">
+            <i class="fas fa-hard-hat mr-2"></i>Civil Engineer & Innovator
+          </div>
+          <h1 class="text-5xl md:text-7xl font-heading font-bold text-white leading-tight drop-shadow-lg">
+            Building the
+            <span
+              class="text-transparent bg-clip-text bg-gradient-to-r from-sky-400 to-emerald-400">Infrastructure</span>
+            <br /> of Tomorrow
+          </h1>
+          <p
+            class="text-lg md:text-xl text-slate-300 max-w-2xl mx-auto leading-relaxed border-l-4 border-amber-500 pl-6 text-left md:text-center md:border-l-0 md:pl-0">
+            Specializing in sustainable urban development, structural
+            integrity, and modern engineering solutions. Founder of
+            <span class="text-white font-semibold">InfraToday</span>.
+          </p>
+          <div class="flex flex-col md:flex-row justify-center gap-6 pt-6">
+            <a href="#projects"
+              class="group relative px-8 py-4 bg-accent text-slate-900 font-bold rounded-lg shadow-lg hover:shadow-amber-500/20 transition-all duration-300 overflow-hidden">
+              <span class="relative z-10 flex items-center gap-2">View Portfolio <i
+                  class="fas fa-arrow-right group-hover:translate-x-1 transition-transform"></i></span>
+              <div
+                class="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+              </div>
+            </a>
+            <a href="#contact"
+              class="px-8 py-4 bg-transparent text-white font-bold rounded-lg shadow-sm border border-slate-500 hover:bg-slate-800/50 transition duration-300 backdrop-blur-sm flex items-center justify-center gap-2">
+              <i class="fas fa-envelope"></i> Contact Me
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="about" class="py-20 bg-white">
+      <div class="container-custom">
+        <div class="text-center max-w-3xl mx-auto mb-16 reveal">
+          <h2 class="section-title">Global Expertise, Local Impact</h2>
+          <p class="text-gray-600 leading-relaxed">
+            I’m <strong>Jeet Badki</strong>, a Construction Management
+            professional (ASU Alumni) bridging the gap between advanced
+            project delivery and hands-on field execution across the US and
+            India.
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-8">
+          <div
+            class="bg-gray-50 p-8 rounded-xl border border-gray-100 hover:shadow-xl hover:-translate-y-1 hover:border-primary transition duration-200 ease-out reveal group">
+            <div
+              class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-white transition-colors text-primary">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4">
+                </path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold mb-4 text-gray-900 group-hover:text-primary transition-colors">
+              Industrial & Urban Infrastructure
+            </h3>
+            <p class="text-gray-600 text-sm mb-4">
+              Expertise in managing large-scale systems, including Wastewater
+              Treatment Plants, Metro infrastructure, and Industrial
+              developments.
+            </p>
+            <ul class="space-y-2 text-gray-600 text-sm">
+              <li>• Project Delivery Lifecycle</li>
+              <li>• Multidisciplinary Coordination</li>
+              <li>• Strategic Urban Planning</li>
+            </ul>
+          </div>
+
+          <div
+            class="bg-gray-50 p-8 rounded-xl border border-gray-100 hover:shadow-xl hover:-translate-y-1 hover:border-primary transition duration-200 ease-out reveal delay-100 group">
+            <div
+              class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-white transition-colors text-primary">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01">
+                </path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold mb-4 text-gray-900 group-hover:text-primary transition-colors">
+              Project Controls & Quality
+            </h3>
+            <p class="text-gray-600 text-sm mb-4">
+              Mastering the technical backbone of construction through
+              rigorous data-driven planning and QA/QC standards.
+            </p>
+            <ul class="space-y-2 text-gray-600 text-sm">
+              <li>• Quantity Take-offs (QTO)</li>
+              <li>• BOQ & Cost Estimation</li>
+              <li>• IS Codes & Safety Compliance</li>
+            </ul>
+          </div>
+
+          <div
+            class="bg-gray-50 p-8 rounded-xl border border-gray-100 hover:shadow-xl hover:-translate-y-1 hover:border-primary transition duration-200 ease-out reveal delay-200 group">
+            <div
+              class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-white transition-colors text-primary">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z">
+                </path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold mb-4 text-gray-900 group-hover:text-primary transition-colors">
+              Modern Execution & BIM
+            </h3>
+            <p class="text-gray-600 text-sm mb-4">
+              Integrating academic insights from ASU with cutting-edge
+              construction technology to ensure durable, community-centric
+              results.
+            </p>
+            <ul class="space-y-2 text-gray-600 text-sm">
+              <li>• BIM & Technology Integration</li>
+              <li>• Quality-Driven Execution</li>
+              <li>• Sustainable Infrastructure</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Projects Portfolio (Vertical Timeline) -->
+    <section id="journey"
+      class="py-24 bg-slate-50 dark:bg-slate-900 transition-colors duration-300 relative overflow-hidden">
+      <!-- Background Elements -->
+      <div
+        class="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-slate-300 dark:via-slate-700 to-transparent">
+      </div>
+
+      <div class="container-custom relative z-10">
+        <div class="reveal pb-20 text-center">
+          <div class="flex flex-col items-center justify-center">
+            <h2 class="text-4xl font-heading font-bold text-slate-900 dark:text-white mb-4">
+              Engineering <span class="text-accent">Journey</span>
+            </h2>
+            <p class="text-secondary dark:text-slate-400 max-w-xl mx-auto text-lg">
+              A chronological timeline of my academic foundation and
+              professional milestones.
+            </p>
+          </div>
+        </div>
+
+        <div class="relative max-w-5xl mx-auto">
+          <!-- Timeline Line -->
+          <div
+            class="absolute left-8 md:left-1/2 top-0 bottom-0 w-0.5 bg-slate-200 dark:bg-slate-700 transform md:-translate-x-1/2">
+            <div
+              class="absolute inset-0 bg-gradient-to-b from-accent/0 via-accent/50 to-accent/0 w-full h-full opacity-50">
+            </div>
+          </div>
+
+          <div class="relative mb-12 md:mb-20 reveal group">
+            <div class="md:flex items-center justify-between w-full">
+              <div class="order-1 md:w-5/12 mb-4 md:mb-0 pl-20 md:pl-0 md:text-right">
+                <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-1 group-hover:text-primary transition">
+                  Btech in Civil Engineering
+                </h3>
+                <div class="text-sm font-semibold text-accent mb-2">
+                  MIT World Peace University, Pune
+                </div>
+                <p class="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">
+                  Undergraduate degree providing the foundational principles
+                  of civil engineering.
+                </p>
+              </div>
+              <div
+                class="z-20 flex items-center justify-center order-1 bg-white border-4 border-gray-100 shadow-xl w-16 h-16 rounded-full absolute left-0 md:left-1/2 transform md:-translate-x-1/2 -translate-y-4 md:translate-y-0 group-hover:scale-110 group-hover:border-primary transition duration-200 overflow-hidden">
+                <img src="assets/logos _organizations/MIT.png" class="w-full h-auto object-contain p-2" alt="Logo" />
+              </div>
+              <div class="order-1 md:w-5/12 pl-20 md:pl-0">
+                <div
+                  class="inline-flex items-center px-4 py-2 rounded-full bg-white dark:bg-slate-800 border border-gray-100 shadow-sm text-sm font-medium text-gray-500">
+                  <span>2018 - 2022</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="relative mb-12 md:mb-20 reveal delay-100 group">
+            <div class="md:flex items-center justify-between w-full flex-row-reverse">
+              <div class="order-1 md:w-5/12 mb-4 md:mb-0 pl-20 md:pl-0 md:text-left">
+                <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-1 group-hover:text-primary transition">
+                  QA/QC Trainee
+                </h3>
+                <div class="text-sm font-semibold text-accent mb-2">
+                  GoM Water Resources Dept., Nagpur
+                </div>
+                <p class="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">
+                  Specialized training in Quality Assurance and Quality
+                  Control protocols.
+                </p>
+              </div>
+              <div
+                class="z-20 flex items-center justify-center order-1 bg-white border-4 border-gray-100 shadow-xl w-16 h-16 rounded-full absolute left-0 md:left-1/2 transform md:-translate-x-1/2 -translate-y-4 md:translate-y-0 group-hover:scale-110 group-hover:border-primary transition duration-200 overflow-hidden">
+                <img src="assets/logos _organizations/GOM- Water Resource Dept.png"
+                  class="w-full h-auto object-contain p-2" alt="Logo" />
+              </div>
+              <div class="order-1 md:w-5/12 pl-20 md:pl-0 md:text-right">
+                <div
+                  class="inline-flex items-center px-4 py-2 rounded-full bg-white dark:bg-slate-800 border border-gray-100 shadow-sm text-sm font-medium text-gray-500">
+                  <span>2021</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="relative mb-12 md:mb-20 reveal group">
+            <div class="md:flex items-center justify-between w-full">
+              <div class="order-1 md:w-5/12 mb-4 md:mb-0 pl-20 md:pl-0 md:text-right">
+                <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-1 group-hover:text-primary transition">
+                  Trainee
+                </h3>
+                <div class="text-sm font-semibold text-accent mb-2">
+                  Ultratech Cement
+                </div>
+                <p class="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">
+                  Gained practical knowledge in cement and material
+                  technology.
+                </p>
+              </div>
+              <div
+                class="z-20 flex items-center justify-center order-1 bg-white border-4 border-gray-100 shadow-xl w-16 h-16 rounded-full absolute left-0 md:left-1/2 transform md:-translate-x-1/2 -translate-y-4 md:translate-y-0 group-hover:scale-110 group-hover:border-primary transition duration-200 overflow-hidden">
+                <img src="assets/logos _organizations/Ultratech Cement.jpg" class="w-full h-auto object-contain p-2"
+                  alt="Logo" />
+              </div>
+              <div class="order-1 md:w-5/12 pl-20 md:pl-0">
+                <div
+                  class="inline-flex items-center px-4 py-2 rounded-full bg-white dark:bg-slate-800 border border-gray-100 shadow-sm text-sm font-medium text-gray-500">
+                  <span>2021</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="relative mb-12 md:mb-20 reveal group">
+            <div class="md:flex items-center justify-between w-full flex-row-reverse">
+              <div class="order-1 md:w-5/12 mb-4 md:mb-0 pl-20 md:pl-0 md:text-left">
+                <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-1 group-hover:text-primary transition">
+                  Site Engineer Intern
+                </h3>
+                <div class="text-sm font-semibold text-accent mb-2">
+                  MAHA Metro Rail Corp Ltd., Pune
+                </div>
+                <p class="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">
+                  Oversaw viaduct precast segment deliveries and erection
+                  activities.
+                </p>
+              </div>
+              <div
+                class="z-20 flex items-center justify-center order-1 bg-white border-4 border-gray-100 shadow-xl w-16 h-16 rounded-full absolute left-0 md:left-1/2 transform md:-translate-x-1/2 -translate-y-4 md:translate-y-0 group-hover:scale-110 group-hover:border-primary transition duration-200 overflow-hidden">
+                <img src="assets/logos _organizations/MAHA Metro rail corp logo.png"
+                  class="w-full h-auto object-contain p-2" alt="Logo" />
+              </div>
+              <div class="order-1 md:w-5/12 pl-20 md:pl-0 md:text-right">
+                <div
+                  class="inline-flex items-center px-4 py-2 rounded-full bg-white dark:bg-slate-800 border border-gray-100 shadow-sm text-sm font-medium text-gray-500">
+                  <span>2021</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="relative mb-12 md:mb-20 reveal group">
+            <div class="md:flex items-center justify-between w-full">
+              <div class="order-1 md:w-5/12 mb-4 md:mb-0 pl-20 md:pl-0 md:text-right">
+                <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-1 group-hover:text-primary transition">
+                  Project Engineer Intern
+                </h3>
+                <div class="text-sm font-semibold text-accent mb-2">
+                  AMs Project Consultants Pvt. Ltd.
+                </div>
+                <p class="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">
+                  Coordinated on-site activities and supported schedule
+                  reliability for housing projects.
+                </p>
+              </div>
+
+              <div
+                class="z-20 flex items-center justify-center order-1 bg-white border-4 border-gray-100 shadow-xl w-16 h-16 rounded-full absolute left-0 md:left-1/2 transform md:-translate-x-1/2 -translate-y-4 md:translate-y-0 group-hover:scale-110 group-hover:border-primary transition duration-200 overflow-hidden">
+                <img src="assets/logos _organizations/AMs logo.png" class="w-full h-auto object-contain p-2"
+                  alt="Logo" />
+              </div>
+
+              <div class="order-1 md:w-5/12 pl-20 md:pl-0">
+                <div
+                  class="inline-flex items-center px-4 py-2 rounded-full bg-white dark:bg-slate-800 border border-gray-100 shadow-sm text-sm font-medium text-gray-500">
+                  <span>2021 - 2022</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="relative mb-12 md:mb-20 reveal group">
+            <div class="md:flex items-center justify-between w-full flex-row-reverse">
+              <div class="order-1 md:w-5/12 mb-4 md:mb-0 pl-20 md:pl-0 md:text-left">
+                <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-1 group-hover:text-primary transition">
+                  Founder
+                </h3>
+                <div class="text-sm font-semibold text-accent mb-2">
+                  InfraToday
+                </div>
+                <p class="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">
+                  Founded a civil engineering news & media company.
+                </p>
+              </div>
+              <div
+                class="z-20 flex items-center justify-center order-1 bg-white border-4 border-gray-100 shadow-xl w-16 h-16 rounded-full absolute left-0 md:left-1/2 transform md:-translate-x-1/2 -translate-y-4 md:translate-y-0 group-hover:scale-110 group-hover:border-primary transition duration-200 overflow-hidden">
+                <img src="assets/logos _organizations/letter head(1).webp" class="w-full h-auto object-contain p-2"
+                  alt="Logo" />
+              </div>
+              <div class="order-1 md:w-5/12 pl-20 md:pl-0 md:text-right">
+                <div
+                  class="inline-flex items-center px-4 py-2 rounded-full bg-white dark:bg-slate-800 border border-gray-100 shadow-sm text-sm font-medium text-gray-500">
+                  <span>2021 - 2022</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="relative mb-12 md:mb-20 reveal group">
+            <div class="md:flex items-center justify-between w-full">
+              <div class="order-1 md:w-5/12 mb-4 md:mb-0 pl-20 md:pl-0 md:text-right">
+                <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-1 group-hover:text-primary transition">
+                  MSc in Construction Mgmt & Tech
+                </h3>
+                <div class="text-sm font-semibold text-accent mb-2">
+                  Arizona State University, USA
+                </div>
+                <p class="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">
+                  Master's degree strengthening multidisciplinary coordination
+                  and safety compliance 25].
+                </p>
+              </div>
+              <div
+                class="z-20 flex items-center justify-center order-1 bg-white border-4 border-gray-100 shadow-xl w-16 h-16 rounded-full absolute left-0 md:left-1/2 transform md:-translate-x-1/2 -translate-y-4 md:translate-y-0 group-hover:scale-110 group-hover:border-primary transition duration-200 overflow-hidden">
+                <img src="assets/logos _organizations/arizona-state-university-logo.png"
+                  class="w-full h-auto object-contain p-2" alt="Logo" />
+              </div>
+              <div class="order-1 md:w-5/12 pl-20 md:pl-0">
+                <div
+                  class="inline-flex items-center px-4 py-2 rounded-full bg-white dark:bg-slate-800 border border-gray-100 shadow-sm text-sm font-medium text-gray-500">
+                  <span>2022 - 2024</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="relative mb-12 md:mb-20 reveal group">
+            <div class="md:flex items-center justify-between w-full flex-row-reverse">
+              <div class="order-1 md:w-5/12 mb-4 md:mb-0 pl-20 md:pl-0 md:text-left">
+                <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-1 group-hover:text-primary transition">
+                  Construction Mgmt Trainee
+                </h3>
+                <div class="text-sm font-semibold text-accent mb-2">
+                  Deepak Saraf & Associates, Pune
+                </div>
+                <p class="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">
+                  Gained field experience through an internship in
+                  construction management.
+                </p>
+              </div>
+              <div
+                class="z-20 flex items-center order-1 bg-white dark:bg-slatorder-gray-100 shadow-xl w-16 h-16 rounded-full absolute left-0 md:left-1/2 transform md:-translate-x-1/2 -translate-y-4 md:translate-y-0 flex justify-center items-center group-hover:scale-110 transition duration-200">
+                <span class="text-xl font-bold text-primary">DS</span>
+              </div>
+              <div class="order-1 md:w-5/12 pl-20 md:pl-0 md:text-right">
+                <div
+                  class="inline-flex items-center px-4 py-2 rounded-full bg-white dark:bg-slate-800 border border-gray-100 shadow-sm text-sm font-medium text-gray-500">
+                  <span>2023</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="relative reveal group">
+            <div class="md:flex items-center justify-between w-full">
+              <div class="order-1 md:w-5/12 mb-4 md:mb-0 pl-20 md:pl-0 md:text-right">
+                <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-1 group-hover:text-primary transition">
+                  Project Engineer
+                </h3>
+                <div class="text-sm font-semibold text-accent mb-2">
+                  Jacobs Engineering Group Inc., USA
+                </div>
+                <p class="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">
+                  Supporting PMC services for major wastewater headworks
+                  improvements in Texas.
+                </p>
+              </div>
+              <div
+                class="z-20 flex items-center justify-center order-1 bg-white border-4 border-gray-100 shadow-xl w-16 h-16 rounded-full absolute left-0 md:left-1/2 transform md:-translate-x-1/2 -translate-y-4 md:translate-y-0 group-hover:scale-110 group-hover:border-primary transition duration-200 overflow-hidden">
+                <img src="assets/logos _organizations/Jacobs logo.png" class="w-full h-auto object-contain p-2"
+                  alt="Logo" />
+              </div>
+              <div class="order-1 md:w-5/12 pl-20 md:pl-0">
+                <div
+                  class="inline-flex items-center px-4 py-2 rounded-full bg-white dark:bg-slate-800 border border-gray-100 shadow-sm text-sm font-medium text-gray-500">
+                  <span>2024 - 2026</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects and Infrastructure Section -->
+    <section id="projects"
+      class="py-32 bg-slate-50 dark:bg-slate-950 relative overflow-hidden transition-colors duration-300">
+
+      <!-- Blueprint Grid Background -->
+      <div class="absolute inset-0 z-0 opacity-[0.03] dark:opacity-[0.05]"
+        style="background-image: linear-gradient(#0f172a 1px, transparent 1px), linear-gradient(to right, #0f172a 1px, transparent 1px); background-size: 40px 40px;">
+      </div>
+
+      <div class="container-custom relative z-10">
+        <div class="reveal text-center max-w-4xl mx-auto mb-20">
+          <div
+            class="inline-flex items-center gap-2 px-3 py-1 bg-white dark:bg-slate-800 border border-gray-200 dark:border-slate-700 rounded-full text-xs font-mono font-bold text-accent tracking-widest uppercase mb-4 shadow-sm">
+            <span class="w-2 h-2 rounded-full bg-accent animate-pulse"></span>
+            Portfolio
+          </div>
+          <h2 class="text-4xl md:text-5xl font-heading font-bold text-slate-900 dark:text-white mb-6">
+            Engineering <span
+              class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-blue-600 dark:from-sky-400 dark:to-emerald-400">Intelligence</span>
+          </h2>
+          <p class="text-secondary dark:text-slate-400 text-lg leading-relaxed max-w-2xl mx-auto">
+            A portfolio of high-impact infrastructure projects, balancing
+            technical precision with sustainable site execution.
+          </p>
+        </div>
+
+        <!-- Filter / Legend Removed -->
+
+        <!-- Project Cards Container -->
+        <div id="projects-container" class="flex flex-col space-y-6 max-w-5xl mx-auto">
+          <!-- Dynamic Content Loaded via Script -->
+        </div>
+      </div>
+    </section>
+    <!--  -->
+    <section id="skills" class="py-24 bg-white dark:bg-slate-950 transition-colors duration-300">
+      <div class="container-custom px-4 mx-auto space-y-24">
+        <!-- Section Header -->
+        <div class="reveal text-center max-w-3xl mx-auto">
+          <h2 class="section-title text-gray-900 dark:text-white text-3xl font-bold mb-6">
+            Expertise & Skills
+          </h2>
+          <p class="text-gray-600 dark:text-gray-400 text-base leading-relaxed">
+            A visual showcase of my technical proficiency and management
+            capabilities in the engineering field.
+          </p>
+        </div>
+
+        <!-- Technical & Engineering Skills -->
+        <div>
+          <div class="reveal text-center py-20 mb-10">
+            <h3 class="text-2xl font-bold text-gray-800 dark:text-slate-200 flex items-center justify-center gap-4">
+              <span class="w-2 h-8 bg-accent rounded-full"></span>
+              Technical & Engineering Skills
+            </h3>
+          </div>
+
+          <div class="max-w-6xl mx-auto">
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
+              <!-- Card -->
+              <div
+                class="group bg-gray-50 dark:bg-slate-900 border border-gray-100 dark:border-slate-800 p-6 rounded-2xl flex flex-col items-center text-center shadow-sm hover:shadow-xl hover:-translate-y-2 hover:border-accent/40 transition-all duration-300 min-h-[180px]">
+                <div class="w-16 h-16 mb-4 flex items-center justify-center">
+                  <img src="assets/skills_icons/Constrcution Engineerin.png" alt="Construction Engineering"
+                    class="max-w-full max-h-full object-contain filter dark:brightness-110" />
+                </div>
+                <h4 class="font-semibold text-gray-900 dark:text-white text-sm tracking-wide mt-auto">
+                  Construction Engineering
+                </h4>
+              </div>
+
+              <div
+                class="group bg-gray-50 dark:bg-slate-900 border border-gray-100 dark:border-slate-800 p-6 rounded-2xl flex flex-col items-center text-center shadow-sm hover:shadow-xl hover:-translate-y-2 hover:border-accent/40 transition-all duration-300 min-h-[180px]">
+                <div class="w-16 h-16 mb-4 flex items-center justify-center">
+                  <img src="assets/skills_icons/Construction Management Services.png" alt="Construction Management"
+                    class="max-w-full max-h-full object-contain filter dark:brightness-110" />
+                </div>
+                <h4 class="font-semibold text-gray-900 dark:text-white text-sm tracking-wide mt-auto">
+                  Construction Management
+                </h4>
+              </div>
+
+              <div
+                class="group bg-gray-50 dark:bg-slate-900 border border-gray-100 dark:border-slate-800 p-6 rounded-2xl flex flex-col items-center text-center shadow-sm hover:shadow-xl hover:-translate-y-2 hover:border-accent/40 transition-all duration-300 min-h-[180px]">
+                <div class="w-16 h-16 mb-4 flex items-center justify-center">
+                  <img src="assets/skills_icons/QHSE.png" alt="QHSE"
+                    class="max-w-full max-h-full object-contain filter dark:brightness-110" />
+                </div>
+                <h4 class="font-semibold text-gray-900 dark:text-white text-sm tracking-wide mt-auto">
+                  QHSE
+                </h4>
+              </div>
+
+              <div
+                class="group bg-gray-50 dark:bg-slate-900 border border-gray-100 dark:border-slate-800 p-6 rounded-2xl flex flex-col items-center text-center shadow-sm hover:shadow-xl hover:-translate-y-2 hover:border-accent/40 transition-all duration-300 min-h-[180px]">
+                <div class="w-16 h-16 mb-4 flex items-center justify-center">
+                  <img src="assets/skills_icons/Quantity takeoff.png" alt="Quantity Take-offs"
+                    class="max-w-full max-h-full object-contain filter dark:brightness-110" />
+                </div>
+                <h4 class="font-semibold text-gray-900 dark:text-white text-sm tracking-wide mt-auto">
+                  Quantity Take-offs
+                </h4>
+              </div>
+
+              <div
+                class="group bg-gray-50 dark:bg-slate-900 border border-gray-100 dark:border-slate-800 p-6 rounded-2xl flex flex-col items-center text-center shadow-sm hover:shadow-xl hover:-translate-y-2 hover:border-accent/40 transition-all duration-300 min-h-[180px]">
+                <div class="w-16 h-16 mb-4 flex items-center justify-center">
+                  <img src="assets/skills_icons/pre-construction icon.png" alt="Pre-Construction"
+                    class="max-w-full max-h-full object-contain filter dark:brightness-110" />
+                </div>
+                <h4 class="font-semibold text-gray-900 dark:text-white text-sm tracking-wide mt-auto">
+                  Pre-Construction
+                </h4>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Management & Strategy -->
+        <div>
+          <div class="reveal text-center py-20 mt-24 mb-10">
+            <h3 class="text-2xl font-bold text-gray-800 dark:text-slate-200 flex items-center justify-center gap-4">
+              <span class="w-2 h-8 bg-accent rounded-full"></span>
+              Management & Strategy
+            </h3>
+          </div>
+
+          <div class="max-w-6xl mx-auto">
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
+              <!-- Card -->
+              <div
+                class="group bg-gray-50 dark:bg-slate-900 border border-gray-100 dark:border-slate-800 p-6 rounded-2xl flex flex-col items-center text-center shadow-sm hover:shadow-xl hover:-translate-y-2 hover:border-accent/40 transition-all duration-300 min-h-[180px]">
+                <div class="w-16 h-16 mb-4 flex items-center justify-center">
+                  <img src="assets/skills_icons/Cost Estimation & Bid Preparation.png" alt="Cost Estimating"
+                    class="max-w-full max-h-full object-contain filter dark:brightness-110" />
+                </div>
+                <h4 class="font-semibold text-gray-900 dark:text-white text-sm tracking-wide mt-auto">
+                  Cost Estimating
+                </h4>
+              </div>
+
+              <div
+                class="group bg-gray-50 dark:bg-slate-900 border border-gray-100 dark:border-slate-800 p-6 rounded-2xl flex flex-col items-center text-center shadow-sm hover:shadow-xl hover:-translate-y-2 hover:border-accent/40 transition-all duration-300 min-h-[180px]">
+                <div class="w-16 h-16 mb-4 flex items-center justify-center">
+                  <img src="assets/skills_icons/Site Supervision & Mgmnt.png" alt="Site Supervision"
+                    class="max-w-full max-h-full object-contain filter dark:brightness-110" />
+                </div>
+                <h4 class="font-semibold text-gray-900 dark:text-white text-sm tracking-wide mt-auto">
+                  Site Supervision
+                </h4>
+              </div>
+
+              <div
+                class="group bg-gray-50 dark:bg-slate-900 border border-gray-100 dark:border-slate-800 p-6 rounded-2xl flex flex-col items-center text-center shadow-sm hover:shadow-xl hover:-translate-y-2 hover:border-accent/40 transition-all duration-300 min-h-[180px]">
+                <div class="w-16 h-16 mb-4 flex items-center justify-center">
+                  <img src="assets/skills_icons/Project Planning.png" alt="Project Planning"
+                    class="max-w-full max-h-full object-contain filter dark:brightness-110" />
+                </div>
+                <h4 class="font-semibold text-gray-900 dark:text-white text-sm tracking-wide mt-auto">
+                  Project Planning
+                </h4>
+              </div>
+
+              <div
+                class="group bg-gray-50 dark:bg-slate-900 border border-gray-100 dark:border-slate-800 p-6 rounded-2xl flex flex-col items-center text-center shadow-sm hover:shadow-xl hover:-translate-y-2 hover:border-accent/40 transition-all duration-300 min-h-[180px]">
+                <div class="w-16 h-16 mb-4 flex items-center justify-center">
+                  <img src="assets/skills_icons/Change Mgmnt.png" alt="Change Management"
+                    class="max-w-full max-h-full object-contain filter dark:brightness-110" />
+                </div>
+                <h4 class="font-semibold text-gray-900 dark:text-white text-sm tracking-wide mt-auto">
+                  Change Management
+                </h4>
+              </div>
+
+              <div
+                class="group bg-gray-50 dark:bg-slate-900 border border-gray-100 dark:border-slate-800 p-6 rounded-2xl flex flex-col items-center text-center shadow-sm hover:shadow-xl hover:-translate-y-2 hover:border-accent/40 transition-all duration-300 min-h-[180px]">
+                <div class="w-16 h-16 mb-4 flex items-center justify-center">
+                  <img src="assets/skills_icons/Client Relations.png" alt="Client Relations"
+                    class="max-w-full max-h-full object-contain filter dark:brightness-110" />
+                </div>
+                <h4 class="font-semibold text-gray-900 dark:text-white text-sm tracking-wide mt-auto">
+                  Client Relations
+                </h4>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials"
+      class="py-24 bg-white dark:bg-slate-950 transition-colors duration-300 relative group overflow-hidden">
+      <!-- Decorative -->
+      <div class="absolute top-0 right-0 p-20 opacity-5 pointer-events-none">
+        <i class="fas fa-quote-right text-9xl text-slate-900 dark:text-white"></i>
+      </div>
+
+      <div class="container-custom relative z-10">
+        <div class="text-center max-w-3xl mx-auto mb-16 reveal">
+          <h2 class="text-4xl font-heading font-bold text-slate-900 dark:text-white mb-4">
+            Client Success Stories
+          </h2>
+          <p class="text-secondary dark:text-slate-400 text-lg">
+            Trusted by government bodies and private developers alike.
+          </p>
+        </div>
+
+        <div class="relative px-4 md:px-12">
+          <!-- Arrows -->
+          <button id="prev-test"
+            class="absolute left-0 top-1/2 -translate-y-1/2 z-10 p-2 bg-white dark:bg-slate-700 rounded-full shadow-lg text-primary dark:text-sky-400 hover:bg-gray-50 dark:hover:bg-slate-600 focus:outline-none hidden md:block opacity-0 group-hover:opacity-100 transition-opacity">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+            </svg>
+          </button>
+          <button id="next-test"
+            class="absolute right-0 top-1/2 -translate-y-1/2 z-10 p-2 bg-white dark:bg-slate-700 rounded-full shadow-lg text-primary dark:text-sky-400 hover:bg-gray-50 dark:hover:bg-slate-600 focus:outline-none hidden md:block opacity-0 group-hover:opacity-100 transition-opacity">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+            </svg>
+          </button>
+
+          <!-- Slider Container -->
+          <div id="testimonials-slider" class="flex overflow-x-auto snap-x snap-mandatory gap-6 pb-8 scrollbar-hide">
+            <!-- Testimonial 1 -->
+            <div
+              class="min-w-[100%] md:min-w-[calc(50%-12px)] lg:min-w-[calc(25%-18px)] snap-center bg-gray-50 dark:bg-slate-900 p-8 rounded-xl border border-gray-100 dark:border-slate-700 relative flex flex-col justify-between">
+              <div>
+                <div class="text-primary dark:text-sky-400 text-4xl font-serif absolute top-4 left-4 opacity-20">
+                  "
+                </div>
+                <p class="text-gray-600 dark:text-gray-300 italic mb-6 relative z-10 pt-4 text-sm">
+                  Jeet's structural analysis saved us nearly 15% in material
+                  costs while actually increasing the safety factor of our
+                  high-rise project. A true professional.
+                </p>
+              </div>
+              <div>
+                <div class="flex items-center mb-2">
+                  <div
+                    class="w-10 h-10 bg-gray-300 rounded-full flex items-center justify-center text-gray-500 font-bold mr-3 shrink-0">
+                    SK
+                  </div>
+                  <div>
+                    <h4 class="font-bold text-gray-900 dark:text-white text-sm">
+                      Sameer Kulkarni
+                    </h4>
+                    <p class="text-xs text-gray-500 dark:text-gray-400">
+                      Director, Apex Realty
+                    </p>
+                  </div>
+                </div>
+                <div class="flex text-yellow-400 text-xs">★★★★★</div>
+              </div>
+            </div>
+
+            <!-- Testimonial 2 -->
+            <div
+              class="min-w-[100%] md:min-w-[calc(50%-12px)] lg:min-w-[calc(25%-18px)] snap-center bg-gray-50 dark:bg-slate-900 p-8 rounded-xl border border-gray-100 dark:border-slate-700 relative flex flex-col justify-between">
+              <div>
+                <div class="text-primary dark:text-sky-400 text-4xl font-serif absolute top-4 left-4 opacity-20">
+                  "
+                </div>
+                <p class="text-gray-600 dark:text-gray-300 italic mb-6 relative z-10 pt-4 text-sm">
+                  The attention to detail in the rainwater harvesting system
+                  design was impeccable. He doesn't just engineer; he thinks
+                  about the ecosystem.
+                </p>
+              </div>
+              <div>
+                <div class="flex items-center mb-2">
+                  <div
+                    class="w-10 h-10 bg-gray-300 rounded-full flex items-center justify-center text-gray-500 font-bold mr-3 shrink-0">
+                    AM
+                  </div>
+                  <div>
+                    <h4 class="font-bold text-gray-900 dark:text-white text-sm">
+                      Anita Mehta
+                    </h4>
+                    <p class="text-xs text-gray-500 dark:text-gray-400">
+                      City Planner
+                    </p>
+                  </div>
+                </div>
+                <div class="flex text-yellow-400 text-xs">★★★★★</div>
+              </div>
+            </div>
+
+            <!-- Testimonial 3 -->
+            <div
+              class="min-w-[100%] md:min-w-[calc(50%-12px)] lg:min-w-[calc(25%-18px)] snap-center bg-gray-50 dark:bg-slate-900 p-8 rounded-xl border border-gray-100 dark:border-slate-700 relative flex flex-col justify-between">
+              <div>
+                <div class="text-primary dark:text-sky-400 text-4xl font-serif absolute top-4 left-4 opacity-20">
+                  "
+                </div>
+                <p class="text-gray-600 dark:text-gray-300 italic mb-6 relative z-10 pt-4 text-sm">
+                  Technically sound and deadline-oriented. The logistics hub
+                  was a complex challenge, but the delivery was flawless.
+                  Highly recommended.
+                </p>
+              </div>
+              <div>
+                <div class="flex items-center mb-2">
+                  <div
+                    class="w-10 h-10 bg-gray-300 rounded-full flex items-center justify-center text-gray-500 font-bold mr-3 shrink-0">
+                    RJ
+                  </div>
+                  <div>
+                    <h4 class="font-bold text-gray-900 dark:text-white text-sm">
+                      Rajesh Jha
+                    </h4>
+                    <p class="text-xs text-gray-500 dark:text-gray-400">
+                      COO, Swift Logistics
+                    </p>
+                  </div>
+                </div>
+                <div class="flex text-yellow-400 text-xs">★★★★★</div>
+              </div>
+            </div>
+
+            <!-- Testimonial 4 (New) -->
+            <div
+              class="min-w-[100%] md:min-w-[calc(50%-12px)] lg:min-w-[calc(25%-18px)] snap-center bg-gray-50 dark:bg-slate-900 p-8 rounded-xl border border-gray-100 dark:border-slate-700 relative flex flex-col justify-between">
+              <div>
+                <div class="text-primary dark:text-sky-400 text-4xl font-serif absolute top-4 left-4 opacity-20">
+                  "
+                </div>
+                <p class="text-gray-600 dark:text-gray-300 italic mb-6 relative z-10 pt-4 text-sm">
+                  Jeet brought a level of innovation to our municipal water
+                  project that we hadn't seen before. Efficient, sustainable,
+                  and robust.
+                </p>
+              </div>
+              <div>
+                <div class="flex items-center mb-2">
+                  <div
+                    class="w-10 h-10 bg-gray-300 rounded-full flex items-center justify-center text-gray-500 font-bold mr-3 shrink-0">
+                    DK
+                  </div>
+                  <div>
+                    <h4 class="font-bold text-gray-900 dark:text-white text-sm">
+                      Dinesh Kumar
+                    </h4>
+                    <p class="text-xs text-gray-500 dark:text-gray-400">
+                      Public Works Dept.
+                    </p>
+                  </div>
+                </div>
+                <div class="flex text-yellow-400 text-xs">★★★★★</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- InfraToday Teaser -->
+    <section id="infratoday" class="py-24 bg-dark relative overflow-hidden text-white">
+      <!-- Background Texture -->
+      <div class="absolute inset-0 opacity-10" style="
+            background-image: url(&quot;data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E&quot;);
+          "></div>
+
+      <div class="container-custom relative z-10 text-center">
+        <div
+          class="inline-block px-4 py-1 mb-6 border border-white/20 rounded-full text-xs font-bold tracking-[0.2em] uppercase text-gray-400 reveal">
+          Coming Late 2026
+        </div>
+        <h2 class="text-5xl md:text-7xl font-black mb-6 tracking-tight reveal">
+          INFRA<span class="text-primary bg-white px-2 ml-1 text-4xl md:text-6xl align-middle rounded-sm">TODAY</span>
+        </h2>
+        <p class="text-xl text-gray-300 max-w-2xl mx-auto mb-10 leading-relaxed reveal">
+          Redefining the standards of civil engineering consultancy. Where
+          innovation meets concrete reality.
+        </p>
+
+        <div
+          class="max-w-md mx-auto bg-white/10 backdrop-blur border border-white/10 p-1 rounded-full flex reveal transition-transform hover:scale-105 duration-300">
+          <input type="email" placeholder="Get notified on launch..."
+            class="bg-transparent border-none text-white placeholder-gray-400 focus:ring-0 w-full px-6 py-3 outline-none" />
+          <button
+            class="bg-primary text-white rounded-full px-8 py-3 font-bold whitespace-nowrap hover:bg-white hover:text-primary transition duration-300">
+            Notify Me
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-white">
+      <div class="container-custom">
+        <div class="grid md:grid-cols-2 gap-16">
+          <div class="reveal">
+            <h2 class="section-title">Let's Build Together</h2>
+            <p class="text-gray-600 mb-8">
+              Discuss your next project with professional insight and
+              engineering precision.
+            </p>
+
+            <div class="space-y-6">
+              <div class="flex items-start">
+                <div
+                  class="w-12 h-12 bg-gray-50 border border-gray-100 rounded-full flex items-center justify-center flex-shrink-0 text-primary">
+                  <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z">
+                    </path>
+                  </svg>
+                </div>
+                <div class="ml-4">
+                  <h4 class="text-lg font-bold text-gray-900">Email</h4>
+                  <a href="mailto:infratoday21@gmail.com"
+                    class="text-gray-600 hover:text-primary transition">infratoday21@gmail.com</a>
+                </div>
+              </div>
+
+              <div class="flex items-start">
+                <div
+                  class="w-12 h-12 bg-gray-50 border border-gray-100 rounded-full flex items-center justify-center flex-shrink-0 text-primary">
+                  <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z">
+                    </path>
+                  </svg>
+                </div>
+                <div class="ml-4">
+                  <h4 class="text-lg font-bold text-gray-900">Phone</h4>
+                  <a href="tel:+919421026260" class="text-gray-600 hover:text-primary transition">+91 94210 26260</a>
+                </div>
+              </div>
+
+              <div class="flex items-start">
+                <div
+                  class="w-12 h-12 bg-gray-50 border border-gray-100 rounded-full flex items-center justify-center flex-shrink-0 text-primary">
+                  <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                  </svg>
+                </div>
+                <div class="ml-4">
+                  <h4 class="text-lg font-bold text-gray-900">Location</h4>
+                  <p class="text-gray-600">
+                    Headquarters to be announced (India)
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <form id="contact-form" class="bg-gray-50 p-8 rounded-2xl shadow-sm border border-gray-100 reveal delay-100">
+            <div class="space-y-6">
+              <div>
+                <label for="name" class="block text-sm font-medium text-gray-700 mb-2">Full Name</label>
+                <input type="text" id="name" name="name" required
+                  class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition"
+                  placeholder="John Doe" />
+              </div>
+              <div>
+                <label for="email" class="block text-sm font-medium text-gray-700 mb-2">Email Address</label>
+                <input type="email" id="email" name="email" required
+                  class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition"
+                  placeholder="john@example.com" />
+              </div>
+              <div>
+                <label for="message" class="block text-sm font-medium text-gray-700 mb-2">Project Details</label>
+                <textarea id="message" name="message" rows="4" required
+                  class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition"
+                  placeholder="Tell me about your project infrastructure needs..."></textarea>
+              </div>
+              <button type="submit" class="w-full btn-primary text-center">
+                Send Inquiry
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="bg-dark border-t border-primary/20 text-white py-16">
+    <div class="container-custom">
+      <div class="flex flex-col md:flex-row justify-between gap-16 mb-12">
+        <div class="flex-1">
+          <h3 class="text-2xl font-bold font-heading mb-4 text-white">
+            Jeet Badki<span class="text-accent">.</span>
+          </h3>
+          <p class="text-gray-400 text-sm leading-relaxed mb-6">
+            Innovative civil engineering solutions for a sustainable future.
+          </p>
+          <div
+            class="inline-flex items-center gap-2 px-3 py-1 bg-white/5 rounded-full text-[10px] font-bold tracking-wider text-accent border border-white/10 uppercase">
+            <span class="w-1.5 h-1.5 rounded-full bg-accent animate-pulse"></span>
+            InfraToday Founder
+          </div>
+        </div>
+
+        <div class="flex-1">
+          <h4 class="text-lg font-bold text-white mb-6">Quick Links</h4>
+          <ul class="space-y-3 text-sm">
+            <li>
+              <a href="#hero"
+                class="text-gray-400 hover:text-white transition-all duration-300 inline-flex items-center gap-2"><i
+                  class="fas fa-chevron-right text-[10px]"></i> Home</a>
+            </li>
+            <li>
+              <a href="#about"
+                class="text-gray-400 hover:text-white transition-all duration-300 inline-flex items-center gap-2"><i
+                  class="fas fa-chevron-right text-[10px]"></i> About</a>
+            </li>
+            <li>
+              <a href="#projects"
+                class="text-gray-400 hover:text-white transition-all duration-300 inline-flex items-center gap-2"><i
+                  class="fas fa-chevron-right text-[10px]"></i> Projects</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="flex-1">
+          <h4 class="text-lg font-bold text-white mb-6">Follow Us</h4>
+          <div class="flex flex-col gap-3">
+            <a href="#" class="flex items-center gap-2 text-gray-400 hover:text-white transition text-xs">
+              <i class="fab fa-facebook-f w-4"></i> Facebook
+            </a>
+            <a href="#" class="flex items-center gap-2 text-gray-400 hover:text-white transition text-xs">
+              <i class="fab fa-instagram w-4"></i> Instagram
+            </a>
+            <a href="#" class="flex items-center gap-2 text-gray-400 hover:text-white transition text-xs">
+              <i class="fab fa-linkedin-in w-4"></i> LinkedIn
+            </a>
+          </div>
+        </div>
+
+        <div class="flex-1">
+          <h4 class="text-lg font-bold text-white mb-6">Connect</h4>
+          <ul class="space-y-3 text-sm text-gray-400">
+            <li class="flex items-center gap-2">
+              <i class="fas fa-phone-alt"></i> <span>919421026260</span>
+            </li>
+            <li class="flex items-center gap-2">
+              <i class="fas fa-envelope"></i>
+              <span class="break-all">info@infra.com</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div
+        class="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center text-sm text-gray-500">
+        <div class="mb-4 md:mb-0 italic text-center md:text-left">
+          &copy; 2026
+          <span class="text-gray-300 not-italic font-medium">Jeet Badki</span>. All rights reserved.
+        </div>
+        <div class="flex flex-col md:flex-row items-center gap-4 text-center md:text-right">
+          <span class="text-[11px] uppercase tracking-widest opacity-60">Designed for Excellence</span>
+          <span class="hover:text-white transition cursor-pointer">Built by <span
+              class="text-accent">MousaAbdo</span></span>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="script.js"></script>
+
+  <!-- Floating Buttons -->
+  <!-- WhatsApp Button -->
+  <a href="https://wa.me/+919421026260 " target="_blank"
+    class="fixed bottom-6 left-6 z-50 bg-primary text-white p-4 rounded-full shadow-lg hover:scale-110 transition-all duration-300 flex items-center justify-center group"
+    aria-label="Chat on WhatsApp">
+    <i class="fab fa-whatsapp text-3xl"></i>
+    <!-- Tooltip -->
+    <span
+      class="absolute left-full ml-2 bg-gray-800 text-white text-xs font-bold px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">
+      Chat with me
+    </span>
+  </a>
+
+  <!-- Back to Top Button -->
+  <button id="back-to-top"
+    class="fixed bottom-6 right-6 z-50 bg-primary text-white p-3 rounded-full shadow-lg hover:bg-sky-600 transition-all duration-300 opacity-0 translate-y-10 pointer-events-none"
+    aria-label="Back to Top">
+    <i class="fas fa-arrow-up text-xl"></i>
+  </button>
+</body>
+
+</html>
