@@ -14,5 +14,8 @@
   "devDependencies": {
     "@tailwindcss/cli": "^4.1.18",
     "tailwindcss": "^4.1.18"
+  },
+  "dependencies": {
+    "swiper": "^12.1.0"
   }
 }

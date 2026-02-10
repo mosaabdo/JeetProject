@@ -15,6 +15,54 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            primary: '#0f172a',
+            secondary: '#1e293b',
+            accent: '#ed8936',
+          },
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            heading: ['Outfit', 'sans-serif'],
+            mono: ['Fira Code', 'monospace'],
+          },
+        }
+      }
+    }
+  </script>
+  <style>
+    .swiper-button-prev:after,
+    .swiper-rtl .swiper-button-next:after {
+      content: '' !important;
+    }
+
+    .swiper-button-next:after,
+    .swiper-rtl .swiper-button-prev:after {
+      content: '' !important;
+    }
+
+    .swiper-button-next svg,
+    .swiper-button-prev svg {
+      width: 24px !important;
+      height: 24px !important;
+    }
+
+    .swiper-button-next,
+    .swiper-button-prev {
+      position: relative !important;
+      margin-top: 0 !important;
+      background-color: transparent;
+      height: 48px;
+      width: 48px;
+    }
+  </style>
   <!-- Subresource Integrity can be added for CDNs if used later -->
 </head>
 
@@ -171,10 +219,10 @@
         <div class="text-center max-w-3xl mx-auto mb-16 reveal">
           <h2 class="section-title">Global Expertise, Local Impact</h2>
           <p class="text-gray-600 leading-relaxed">
-            I’m <strong>Jeet Badki</strong>, a Construction Management
-            professional (ASU Alumni) bridging the gap between advanced
-            project delivery and hands-on field execution across the US and
-            India.
+            I’m <strong> Jeet Badki </strong>, a Construction Management professional committed to delivering efficient,
+            high‑quality solutions for clients through diverse construction experience in both the US and India.I’m Jeet
+            Badki, a Construction Management professional committed to delivering efficient, high‑quality solutions for
+            clients through diverse construction experience in both the US and India.
           </p>
         </div>
 
@@ -193,14 +241,13 @@
               Industrial & Urban Infrastructure
             </h3>
             <p class="text-gray-600 text-sm mb-4">
-              Expertise in managing large-scale systems, including Wastewater
-              Treatment Plants, Metro infrastructure, and Industrial
-              developments.
+              Experienced in delivering complex Industrial, Multifamily, Heavy Civil, and Commercial projects through
+              integrated engineering and construction management practices.
             </p>
             <ul class="space-y-2 text-gray-600 text-sm">
-              <li>• Project Delivery Lifecycle</li>
-              <li>• Multidisciplinary Coordination</li>
-              <li>• Strategic Urban Planning</li>
+              <li>• End-to-End Project Delivery</li>
+              <li>• multidisciplinary collaboration</li>
+              <li>• Resources planning & Scheduling</li>
             </ul>
           </div>
 
@@ -218,8 +265,8 @@
               Project Controls & Quality
             </h3>
             <p class="text-gray-600 text-sm mb-4">
-              Mastering the technical backbone of construction through
-              rigorous data-driven planning and QA/QC standards.
+              Driving successful project delivery through integrated project controls and uncompromising QA/QC
+              practices.
             </p>
             <ul class="space-y-2 text-gray-600 text-sm">
               <li>• Quantity Take-offs (QTO)</li>
@@ -241,14 +288,14 @@
               Modern Execution & BIM
             </h3>
             <p class="text-gray-600 text-sm mb-4">
-              Integrating academic insights from ASU with cutting-edge
-              construction technology to ensure durable, community-centric
-              results.
+              Leveraging practical, tech‑enabled solutions to streamline coordination, reduce risk, and deliver
+              high‑value, durable results for clients and communities.
             </p>
             <ul class="space-y-2 text-gray-600 text-sm">
-              <li>• BIM & Technology Integration</li>
-              <li>• Quality-Driven Execution</li>
-              <li>• Sustainable Infrastructure</li>
+
+              <li>• BIM-enabled coordination & visualization</li>
+              <li>• Technology‑Driven Quality Execution</li>
+              <li>• Durable Infrastructure Delivery</li>
             </ul>
           </div>
         </div>
@@ -321,8 +368,8 @@
                   GoM Water Resources Dept., Nagpur
                 </div>
                 <p class="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">
-                  Specialized training in Quality Assurance and Quality
-                  Control protocols.
+                  QA/QC training backed by hands‑on testing of concrete, aggregates, and soils for major infrastructure
+                  projects.
                 </p>
               </div>
               <div
@@ -377,8 +424,8 @@
                   MAHA Metro Rail Corp Ltd., Pune
                 </div>
                 <p class="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">
-                  Oversaw viaduct precast segment deliveries and erection
-                  activities.
+                  Supported project controls, enforced on‑site safety, and oversaw viaduct segment deliveries and
+                  erection activities.
                 </p>
               </div>
               <div
@@ -405,8 +452,8 @@
                   AMs Project Consultants Pvt. Ltd.
                 </div>
                 <p class="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">
-                  Coordinated on-site activities and supported schedule
-                  reliability for housing projects.
+                  Coordinated on‑site activities, supported schedule reliability, and assisted pre‑construction and
+                  client coordination for industrial projects.
                 </p>
               </div>
 
@@ -435,7 +482,7 @@
                   InfraToday
                 </div>
                 <p class="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">
-                  Founded a civil engineering news & media company.
+                  Founder of InfraToday, a platform focused on simplifying global construction and engineering updates..
                 </p>
               </div>
               <div
@@ -462,8 +509,7 @@
                   Arizona State University, USA
                 </div>
                 <p class="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">
-                  Master's degree strengthening multidisciplinary coordination
-                  and safety compliance 25].
+                  Master's degree strengthening construction management principles for client focused outcomes.
                 </p>
               </div>
               <div
@@ -490,8 +536,8 @@
                   Deepak Saraf & Associates, Pune
                 </div>
                 <p class="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">
-                  Gained field experience through an internship in
-                  construction management.
+                  Delivered smooth project execution for clients through coordinated documentation, logistics, labor
+                  scheduling, and QA/QC.
                 </p>
               </div>
               <div
@@ -517,7 +563,7 @@
                   Jacobs Engineering Group Inc., USA
                 </div>
                 <p class="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">
-                  Supporting PMC services for major wastewater headworks
+                  Supporting PMC services for major wastewater Facility
                   improvements in Texas.
                 </p>
               </div>
@@ -559,8 +605,8 @@
               class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-blue-600 dark:from-sky-400 dark:to-emerald-400">Intelligence</span>
           </h2>
           <p class="text-secondary dark:text-slate-400 text-lg leading-relaxed max-w-2xl mx-auto">
-            A portfolio of high-impact infrastructure projects, balancing
-            technical precision with sustainable site execution.
+            A portfolio of high‑impact infrastructure projects, uniting technical precision with responsible and
+            efficient on-site execution.
           </p>
         </div>
 
@@ -573,22 +619,22 @@
       </div>
     </section>
     <!--  -->
-    <section id="skills" class="py-24 bg-white dark:bg-slate-950 transition-colors duration-300">
-      <div class="container-custom px-4 mx-auto space-y-24">
+    <section id="skills" class=" bg-white dark:bg-slate-950 transition-colors duration-300">
+      <div class="container-custom px-4 mx-auto ">
         <!-- Section Header -->
         <div class="reveal text-center max-w-3xl mx-auto">
-          <h2 class="section-title text-gray-900 dark:text-white text-3xl font-bold mb-6">
+          <h2 class="section-title text-gray-900 dark:text-white text-3xl font-bold mb-2">
             Expertise & Skills
           </h2>
           <p class="text-gray-600 dark:text-gray-400 text-base leading-relaxed">
             A visual showcase of my technical proficiency and management
-            capabilities in the engineering field.
+            capabilities in the construction engineering field.
           </p>
         </div>
 
         <!-- Technical & Engineering Skills -->
         <div>
-          <div class="reveal text-center py-20 mb-10">
+          <div class="reveal text-center py-20 ">
             <h3 class="text-2xl font-bold text-gray-800 dark:text-slate-200 flex items-center justify-center gap-4">
               <span class="w-2 h-8 bg-accent rounded-full"></span>
               Technical & Engineering Skills
@@ -658,7 +704,7 @@
 
         <!-- Management & Strategy -->
         <div>
-          <div class="reveal text-center py-20 mt-24 mb-10">
+          <div class="reveal text-center py-20 ">
             <h3 class="text-2xl font-bold text-gray-800 dark:text-slate-200 flex items-center justify-center gap-4">
               <span class="w-2 h-8 bg-accent rounded-full"></span>
               Management & Strategy
@@ -728,255 +774,382 @@
       </div>
     </section>
 
+
+
+
+
+
+
+
     <!-- Testimonials Section -->
     <section id="testimonials"
-      class="py-24 bg-white dark:bg-slate-950 transition-colors duration-300 relative group overflow-hidden">
-      <!-- Decorative -->
-      <div class="absolute top-0 right-0 p-20 opacity-5 pointer-events-none">
-        <i class="fas fa-quote-right text-9xl text-slate-900 dark:text-white"></i>
+      class="py-32 bg-slate-50 dark:bg-slate-950 relative overflow-hidden transition-colors duration-300">
+
+      <!-- Blueprint Grid Background (matches Projects section) -->
+      <div class="absolute inset-0 z-0 opacity-[0.03] dark:opacity-[0.05]"
+        style="background-image: linear-gradient(#0f172a 1px, transparent 1px), linear-gradient(to right, #0f172a 1px, transparent 1px); background-size: 40px 40px;">
+      </div>
+
+      <!-- Top Divider Gradient -->
+      <div
+        class="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-slate-300 dark:via-slate-700 to-transparent">
+      </div>
+
+      <!-- Decorative Blurs -->
+      <div
+        class="absolute top-1/2 left-0 -translate-y-1/2 -ml-40 w-80 h-80 bg-primary/5 dark:bg-sky-500/5 rounded-full blur-3xl pointer-events-none">
+      </div>
+      <div
+        class="absolute bottom-0 right-0 -mb-20 -mr-20 w-96 h-96 bg-accent/5 rounded-full blur-3xl pointer-events-none">
       </div>
 
       <div class="container-custom relative z-10">
-        <div class="text-center max-w-3xl mx-auto mb-16 reveal">
-          <h2 class="text-4xl font-heading font-bold text-slate-900 dark:text-white mb-4">
-            Client Success Stories
+
+        <!-- Section Header (matches Projects section pattern) -->
+        <div class="reveal text-center max-w-4xl mx-auto mb-20">
+          <div
+            class="inline-flex items-center gap-2 px-3 py-1 bg-white dark:bg-slate-800 border border-gray-200 dark:border-slate-700 rounded-full text-xs font-mono font-bold text-accent tracking-widest uppercase mb-4 shadow-sm">
+            <span class="w-2 h-2 rounded-full bg-accent animate-pulse"></span>
+            Testimonials
+          </div>
+          <h2 class="text-4xl md:text-5xl font-heading font-bold text-slate-900 dark:text-white mb-6">
+            Client <span
+              class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-blue-600 dark:from-sky-400 dark:to-emerald-400">Success
+              Stories</span>
           </h2>
-          <p class="text-secondary dark:text-slate-400 text-lg">
-            Trusted by government bodies and private developers alike.
+          <p class="text-secondary dark:text-slate-400 text-lg leading-relaxed max-w-2xl mx-auto">
+            Trusted by government bodies and private developers alike for precision engineering and reliable project
+            delivery.
           </p>
         </div>
 
-        <div class="relative px-4 md:px-12">
-          <!-- Arrows -->
-          <button id="prev-test"
-            class="absolute left-0 top-1/2 -translate-y-1/2 z-10 p-2 bg-white dark:bg-slate-700 rounded-full shadow-lg text-primary dark:text-sky-400 hover:bg-gray-50 dark:hover:bg-slate-600 focus:outline-none hidden md:block opacity-0 group-hover:opacity-100 transition-opacity">
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
-            </svg>
-          </button>
-          <button id="next-test"
-            class="absolute right-0 top-1/2 -translate-y-1/2 z-10 p-2 bg-white dark:bg-slate-700 rounded-full shadow-lg text-primary dark:text-sky-400 hover:bg-gray-50 dark:hover:bg-slate-600 focus:outline-none hidden md:block opacity-0 group-hover:opacity-100 transition-opacity">
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
-            </svg>
-          </button>
-
-          <!-- Slider Container -->
-          <div id="testimonials-slider" class="flex overflow-x-auto snap-x snap-mandatory gap-6 pb-8 scrollbar-hide">
-            <!-- Testimonial 1 -->
+        <!-- Slider Area -->
+        <section class="py-24 ">
+          <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div
-              class="min-w-[100%] md:min-w-[calc(50%-12px)] lg:min-w-[calc(25%-18px)] snap-center bg-gray-50 dark:bg-slate-900 p-8 rounded-xl border border-gray-100 dark:border-slate-700 relative flex flex-col justify-between">
-              <div>
-                <div class="text-primary dark:text-sky-400 text-4xl font-serif absolute top-4 left-4 opacity-20">
-                  "
-                </div>
-                <p class="text-gray-600 dark:text-gray-300 italic mb-6 relative z-10 pt-4 text-sm">
-                  Jeet's structural analysis saved us nearly 15% in material
-                  costs while actually increasing the safety factor of our
-                  high-rise project. A true professional.
-                </p>
-              </div>
-              <div>
-                <div class="flex items-center mb-2">
-                  <div
-                    class="w-10 h-10 bg-gray-300 rounded-full flex items-center justify-center text-gray-500 font-bold mr-3 shrink-0">
-                    SK
-                  </div>
-                  <div>
-                    <h4 class="font-bold text-gray-900 dark:text-white text-sm">
-                      Sameer Kulkarni
-                    </h4>
-                    <p class="text-xs text-gray-500 dark:text-gray-400">
-                      Director, Apex Realty
-                    </p>
-                  </div>
-                </div>
-                <div class="flex text-yellow-400 text-xs">★★★★★</div>
-              </div>
-            </div>
+              class="flex justify-center items-center gap-y-8 lg:gap-y-0 flex-wrap md:flex-wrap lg:flex-nowrap lg:flex-row lg:justify-between lg:gap-x-8 max-w-sm sm:max-w-2xl lg:max-w-full mx-auto">
+              <div class="w-full lg:w-1/2  slider-content22">
+                <span class="text-sm text-gray-500 font-medium mb-4 block">Testimonial</span>
+                <h2 class="text-4xl font-bold text-gray-900 leading-[3.25rem] mb-8">23k+ Customers gave their <span
+                    class=" text-transparent bg-clip-text bg-gradient-to-tr from-indigo-600 to-violet-600">Feedback</span>
+                </h2>
+                <!-- Slider controls -->
+                <div class="flex items-center justify-center lg:justify-start gap-10">
+                  <button id="slider-button-left"
+                    class="swiper-button-prev group flex justify-center items-center border border-solid border-indigo-600 w-12 h-12 transition-all duration-500 rounded-lg hover:bg-indigo-600"
+                    data-carousel-prev>
+                    <svg class="h-6 w-6 text-indigo-600 group-hover:text-white" viewBox="0 0 24 24" fill="none"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M20.9999 12L4.99992 12M9.99992 6L4.70703 11.2929C4.3737 11.6262 4.20703 11.7929 4.20703 12C4.20703 12.2071 4.3737 12.3738 4.70703 12.7071L9.99992 18"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
 
-            <!-- Testimonial 2 -->
-            <div
-              class="min-w-[100%] md:min-w-[calc(50%-12px)] lg:min-w-[calc(25%-18px)] snap-center bg-gray-50 dark:bg-slate-900 p-8 rounded-xl border border-gray-100 dark:border-slate-700 relative flex flex-col justify-between">
-              <div>
-                <div class="text-primary dark:text-sky-400 text-4xl font-serif absolute top-4 left-4 opacity-20">
-                  "
-                </div>
-                <p class="text-gray-600 dark:text-gray-300 italic mb-6 relative z-10 pt-4 text-sm">
-                  The attention to detail in the rainwater harvesting system
-                  design was impeccable. He doesn't just engineer; he thinks
-                  about the ecosystem.
-                </p>
-              </div>
-              <div>
-                <div class="flex items-center mb-2">
-                  <div
-                    class="w-10 h-10 bg-gray-300 rounded-full flex items-center justify-center text-gray-500 font-bold mr-3 shrink-0">
-                    AM
-                  </div>
-                  <div>
-                    <h4 class="font-bold text-gray-900 dark:text-white text-sm">
-                      Anita Mehta
-                    </h4>
-                    <p class="text-xs text-gray-500 dark:text-gray-400">
-                      City Planner
-                    </p>
-                  </div>
-                </div>
-                <div class="flex text-yellow-400 text-xs">★★★★★</div>
-              </div>
-            </div>
+                  </button>
+                  <button id="slider-button-right"
+                    class="swiper-button-next group flex justify-center items-center border border-solid border-indigo-600 w-12 h-12 transition-all duration-500 rounded-lg hover:bg-indigo-600"
+                    data-carousel-next>
+                    <svg class="h-6 w-6 text-indigo-600 group-hover:text-white" viewBox="0 0 24 24" fill="none"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M3 12L19 12M14 18L19.2929 12.7071C19.6262 12.3738 19.7929 12.2071 19.7929 12C19.7929 11.7929 19.6262 11.6262 19.2929 11.2929L14 6"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
 
-            <!-- Testimonial 3 -->
-            <div
-              class="min-w-[100%] md:min-w-[calc(50%-12px)] lg:min-w-[calc(25%-18px)] snap-center bg-gray-50 dark:bg-slate-900 p-8 rounded-xl border border-gray-100 dark:border-slate-700 relative flex flex-col justify-between">
-              <div>
-                <div class="text-primary dark:text-sky-400 text-4xl font-serif absolute top-4 left-4 opacity-20">
-                  "
+                  </button>
                 </div>
-                <p class="text-gray-600 dark:text-gray-300 italic mb-6 relative z-10 pt-4 text-sm">
-                  Technically sound and deadline-oriented. The logistics hub
-                  was a complex challenge, but the delivery was flawless.
-                  Highly recommended.
-                </p>
               </div>
-              <div>
-                <div class="flex items-center mb-2">
-                  <div
-                    class="w-10 h-10 bg-gray-300 rounded-full flex items-center justify-center text-gray-500 font-bold mr-3 shrink-0">
-                    RJ
-                  </div>
-                  <div>
-                    <h4 class="font-bold text-gray-900 dark:text-white text-sm">
-                      Rajesh Jha
-                    </h4>
-                    <p class="text-xs text-gray-500 dark:text-gray-400">
-                      COO, Swift Logistics
-                    </p>
-                  </div>
-                </div>
-                <div class="flex text-yellow-400 text-xs">★★★★★</div>
-              </div>
-            </div>
+              <div class="w-full lg:w-1/2">
+                <!--Slider wrapper-->
+                <div class="swiper mySwiper">
+                  <div class="swiper-wrapper">
 
-            <!-- Testimonial 4 (New) -->
-            <div
-              class="min-w-[100%] md:min-w-[calc(50%-12px)] lg:min-w-[calc(25%-18px)] snap-center bg-gray-50 dark:bg-slate-900 p-8 rounded-xl border border-gray-100 dark:border-slate-700 relative flex flex-col justify-between">
-              <div>
-                <div class="text-primary dark:text-sky-400 text-4xl font-serif absolute top-4 left-4 opacity-20">
-                  "
-                </div>
-                <p class="text-gray-600 dark:text-gray-300 italic mb-6 relative z-10 pt-4 text-sm">
-                  Jeet brought a level of innovation to our municipal water
-                  project that we hadn't seen before. Efficient, sustainable,
-                  and robust.
-                </p>
-              </div>
-              <div>
-                <div class="flex items-center mb-2">
-                  <div
-                    class="w-10 h-10 bg-gray-300 rounded-full flex items-center justify-center text-gray-500 font-bold mr-3 shrink-0">
-                    DK
+                    <div
+                      class="swiper-slide group bg-white border border-solid border-gray-300 rounded-2xl max-sm:max-w-sm max-sm:mx-auto p-6 transition-all duration-500 hover:border-indigo-600">
+                      <div class="flex items-center gap-5 mb-5 sm:mb-9">
+                        <img class="rounded-full object-cover" src="https://pagedone.io/asset/uploads/1696229969.png"
+                          alt="avatar">
+                        <div class="grid gap-1">
+                          <h5 class="text-gray-900 font-medium transition-all duration-500  ">Jane D</h5>
+                          <span class="text-sm leading-6 text-gray-500">CEO </span>
+                        </div>
+                      </div>
+                      <div class="flex items-center mb-5 sm:mb-9 gap-2 text-amber-500 transition-all duration-500  ">
+                        <svg class="w-5 h-5" viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path
+                            d="M8.10326 1.31699C8.47008 0.57374 9.52992 0.57374 9.89674 1.31699L11.7063 4.98347C11.8519 5.27862 12.1335 5.48319 12.4592 5.53051L16.5054 6.11846C17.3256 6.23765 17.6531 7.24562 17.0596 7.82416L14.1318 10.6781C13.8961 10.9079 13.7885 11.2389 13.8442 11.5632L14.5353 15.5931C14.6754 16.41 13.818 17.033 13.0844 16.6473L9.46534 14.7446C9.17402 14.5915 8.82598 14.5915 8.53466 14.7446L4.91562 16.6473C4.18199 17.033 3.32456 16.41 3.46467 15.5931L4.15585 11.5632C4.21148 11.2389 4.10393 10.9079 3.86825 10.6781L0.940384 7.82416C0.346867 7.24562 0.674378 6.23765 1.4946 6.11846L5.54081 5.53051C5.86652 5.48319 6.14808 5.27862 6.29374 4.98347L8.10326 1.31699Z"
+                            fill="currentColor"></path>
+                        </svg>
+                        <svg class="w-5 h-5" viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path
+                            d="M8.10326 1.31699C8.47008 0.57374 9.52992 0.57374 9.89674 1.31699L11.7063 4.98347C11.8519 5.27862 12.1335 5.48319 12.4592 5.53051L16.5054 6.11846C17.3256 6.23765 17.6531 7.24562 17.0596 7.82416L14.1318 10.6781C13.8961 10.9079 13.7885 11.2389 13.8442 11.5632L14.5353 15.5931C14.6754 16.41 13.818 17.033 13.0844 16.6473L9.46534 14.7446C9.17402 14.5915 8.82598 14.5915 8.53466 14.7446L4.91562 16.6473C4.18199 17.033 3.32456 16.41 3.46467 15.5931L4.15585 11.5632C4.21148 11.2389 4.10393 10.9079 3.86825 10.6781L0.940384 7.82416C0.346867 7.24562 0.674378 6.23765 1.4946 6.11846L5.54081 5.53051C5.86652 5.48319 6.14808 5.27862 6.29374 4.98347L8.10326 1.31699Z"
+                            fill="currentColor"></path>
+                        </svg>
+                        <svg class="w-5 h-5" viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path
+                            d="M8.10326 1.31699C8.47008 0.57374 9.52992 0.57374 9.89674 1.31699L11.7063 4.98347C11.8519 5.27862 12.1335 5.48319 12.4592 5.53051L16.5054 6.11846C17.3256 6.23765 17.6531 7.24562 17.0596 7.82416L14.1318 10.6781C13.8961 10.9079 13.7885 11.2389 13.8442 11.5632L14.5353 15.5931C14.6754 16.41 13.818 17.033 13.0844 16.6473L9.46534 14.7446C9.17402 14.5915 8.82598 14.5915 8.53466 14.7446L4.91562 16.6473C4.18199 17.033 3.32456 16.41 3.46467 15.5931L4.15585 11.5632C4.21148 11.2389 4.10393 10.9079 3.86825 10.6781L0.940384 7.82416C0.346867 7.24562 0.674378 6.23765 1.4946 6.11846L5.54081 5.53051C5.86652 5.48319 6.14808 5.27862 6.29374 4.98347L8.10326 1.31699Z"
+                            fill="currentColor"></path>
+                        </svg>
+                        <svg class="w-5 h-5" viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path
+                            d="M8.10326 1.31699C8.47008 0.57374 9.52992 0.57374 9.89674 1.31699L11.7063 4.98347C11.8519 5.27862 12.1335 5.48319 12.4592 5.53051L16.5054 6.11846C17.3256 6.23765 17.6531 7.24562 17.0596 7.82416L14.1318 10.6781C13.8961 10.9079 13.7885 11.2389 13.8442 11.5632L14.5353 15.5931C14.6754 16.41 13.818 17.033 13.0844 16.6473L9.46534 14.7446C9.17402 14.5915 8.82598 14.5915 8.53466 14.7446L4.91562 16.6473C4.18199 17.033 3.32456 16.41 3.46467 15.5931L4.15585 11.5632C4.21148 11.2389 4.10393 10.9079 3.86825 10.6781L0.940384 7.82416C0.346867 7.24562 0.674378 6.23765 1.4946 6.11846L5.54081 5.53051C5.86652 5.48319 6.14808 5.27862 6.29374 4.98347L8.10326 1.31699Z"
+                            fill="currentColor"></path>
+                        </svg>
+                        <svg class="w-5 h-5" viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path
+                            d="M8.10326 1.31699C8.47008 0.57374 9.52992 0.57374 9.89674 1.31699L11.7063 4.98347C11.8519 5.27862 12.1335 5.48319 12.4592 5.53051L16.5054 6.11846C17.3256 6.23765 17.6531 7.24562 17.0596 7.82416L14.1318 10.6781C13.8961 10.9079 13.7885 11.2389 13.8442 11.5632L14.5353 15.5931C14.6754 16.41 13.818 17.033 13.0844 16.6473L9.46534 14.7446C9.17402 14.5915 8.82598 14.5915 8.53466 14.7446L4.91562 16.6473C4.18199 17.033 3.32456 16.41 3.46467 15.5931L4.15585 11.5632C4.21148 11.2389 4.10393 10.9079 3.86825 10.6781L0.940384 7.82416C0.346867 7.24562 0.674378 6.23765 1.4946 6.11846L5.54081 5.53051C5.86652 5.48319 6.14808 5.27862 6.29374 4.98347L8.10326 1.31699Z"
+                            fill="currentColor"></path>
+                        </svg>
+                      </div>
+                      <p
+                        class="text-sm text-gray-500 leading-6 transition-all duration-500 min-h-24  group-hover:text-gray-800">
+                        The user interface of this pagedone is so intuitive, I was able to start using it
+                        without any guidance.
+                      </p>
+
+                    </div>
+                    <div
+                      class="swiper-slide group bg-white border border-solid border-gray-300 rounded-2xl max-sm:max-w-sm max-sm:mx-auto p-6 transition-all duration-500 hover:border-indigo-600">
+                      <div class="flex items-center gap-5 mb-5 sm:mb-9">
+                        <img class="rounded-full object-cover" src="	https://pagedone.io/asset/uploads/1696229994.png"
+                          alt="avatar">
+                        <div class="grid gap-1">
+                          <h5 class="text-gray-900 font-medium transition-all duration-500  ">Harsh P.
+                          </h5>
+                          <span class="text-sm leading-6 text-gray-500">Product Designer </span>
+                        </div>
+                      </div>
+                      <div class="flex items-center mb-5 sm:mb-9 gap-2 text-amber-500 transition-all duration-500  ">
+                        <svg class="w-5 h-5" viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path
+                            d="M8.10326 1.31699C8.47008 0.57374 9.52992 0.57374 9.89674 1.31699L11.7063 4.98347C11.8519 5.27862 12.1335 5.48319 12.4592 5.53051L16.5054 6.11846C17.3256 6.23765 17.6531 7.24562 17.0596 7.82416L14.1318 10.6781C13.8961 10.9079 13.7885 11.2389 13.8442 11.5632L14.5353 15.5931C14.6754 16.41 13.818 17.033 13.0844 16.6473L9.46534 14.7446C9.17402 14.5915 8.82598 14.5915 8.53466 14.7446L4.91562 16.6473C4.18199 17.033 3.32456 16.41 3.46467 15.5931L4.15585 11.5632C4.21148 11.2389 4.10393 10.9079 3.86825 10.6781L0.940384 7.82416C0.346867 7.24562 0.674378 6.23765 1.4946 6.11846L5.54081 5.53051C5.86652 5.48319 6.14808 5.27862 6.29374 4.98347L8.10326 1.31699Z"
+                            fill="currentColor"></path>
+                        </svg>
+                        <svg class="w-5 h-5" viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path
+                            d="M8.10326 1.31699C8.47008 0.57374 9.52992 0.57374 9.89674 1.31699L11.7063 4.98347C11.8519 5.27862 12.1335 5.48319 12.4592 5.53051L16.5054 6.11846C17.3256 6.23765 17.6531 7.24562 17.0596 7.82416L14.1318 10.6781C13.8961 10.9079 13.7885 11.2389 13.8442 11.5632L14.5353 15.5931C14.6754 16.41 13.818 17.033 13.0844 16.6473L9.46534 14.7446C9.17402 14.5915 8.82598 14.5915 8.53466 14.7446L4.91562 16.6473C4.18199 17.033 3.32456 16.41 3.46467 15.5931L4.15585 11.5632C4.21148 11.2389 4.10393 10.9079 3.86825 10.6781L0.940384 7.82416C0.346867 7.24562 0.674378 6.23765 1.4946 6.11846L5.54081 5.53051C5.86652 5.48319 6.14808 5.27862 6.29374 4.98347L8.10326 1.31699Z"
+                            fill="currentColor"></path>
+                        </svg>
+                        <svg class="w-5 h-5" viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path
+                            d="M8.10326 1.31699C8.47008 0.57374 9.52992 0.57374 9.89674 1.31699L11.7063 4.98347C11.8519 5.27862 12.1335 5.48319 12.4592 5.53051L16.5054 6.11846C17.3256 6.23765 17.6531 7.24562 17.0596 7.82416L14.1318 10.6781C13.8961 10.9079 13.7885 11.2389 13.8442 11.5632L14.5353 15.5931C14.6754 16.41 13.818 17.033 13.0844 16.6473L9.46534 14.7446C9.17402 14.5915 8.82598 14.5915 8.53466 14.7446L4.91562 16.6473C4.18199 17.033 3.32456 16.41 3.46467 15.5931L4.15585 11.5632C4.21148 11.2389 4.10393 10.9079 3.86825 10.6781L0.940384 7.82416C0.346867 7.24562 0.674378 6.23765 1.4946 6.11846L5.54081 5.53051C5.86652 5.48319 6.14808 5.27862 6.29374 4.98347L8.10326 1.31699Z"
+                            fill="currentColor"></path>
+                        </svg>
+                        <svg class="w-5 h-5" viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path
+                            d="M8.10326 1.31699C8.47008 0.57374 9.52992 0.57374 9.89674 1.31699L11.7063 4.98347C11.8519 5.27862 12.1335 5.48319 12.4592 5.53051L16.5054 6.11846C17.3256 6.23765 17.6531 7.24562 17.0596 7.82416L14.1318 10.6781C13.8961 10.9079 13.7885 11.2389 13.8442 11.5632L14.5353 15.5931C14.6754 16.41 13.818 17.033 13.0844 16.6473L9.46534 14.7446C9.17402 14.5915 8.82598 14.5915 8.53466 14.7446L4.91562 16.6473C4.18199 17.033 3.32456 16.41 3.46467 15.5931L4.15585 11.5632C4.21148 11.2389 4.10393 10.9079 3.86825 10.6781L0.940384 7.82416C0.346867 7.24562 0.674378 6.23765 1.4946 6.11846L5.54081 5.53051C5.86652 5.48319 6.14808 5.27862 6.29374 4.98347L8.10326 1.31699Z"
+                            fill="currentColor"></path>
+                        </svg>
+                        <svg class="w-5 h-5" viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path
+                            d="M8.10326 1.31699C8.47008 0.57374 9.52992 0.57374 9.89674 1.31699L11.7063 4.98347C11.8519 5.27862 12.1335 5.48319 12.4592 5.53051L16.5054 6.11846C17.3256 6.23765 17.6531 7.24562 17.0596 7.82416L14.1318 10.6781C13.8961 10.9079 13.7885 11.2389 13.8442 11.5632L14.5353 15.5931C14.6754 16.41 13.818 17.033 13.0844 16.6473L9.46534 14.7446C9.17402 14.5915 8.82598 14.5915 8.53466 14.7446L4.91562 16.6473C4.18199 17.033 3.32456 16.41 3.46467 15.5931L4.15585 11.5632C4.21148 11.2389 4.10393 10.9079 3.86825 10.6781L0.940384 7.82416C0.346867 7.24562 0.674378 6.23765 1.4946 6.11846L5.54081 5.53051C5.86652 5.48319 6.14808 5.27862 6.29374 4.98347L8.10326 1.31699Z"
+                            fill="currentColor"></path>
+                        </svg>
+                      </div>
+                      <p
+                        class="text-sm text-gray-500 leading-6 transition-all duration-500 min-h-24 group-hover:text-gray-800">
+                        I used to dread doing my taxes every year, but pagedone has made the process so much
+                        simpler and stress-free.
+                      </p>
+
+                    </div>
+                    <div
+                      class="swiper-slide group bg-white border border-solid border-gray-300 rounded-2xl max-sm:max-w-sm max-sm:mx-auto p-6 transition-all duration-500 hover:border-indigo-600">
+                      <div class="flex items-center gap-5 mb-5 sm:mb-9">
+                        <img class="rounded-full object-cover" src="https://pagedone.io/asset/uploads/1696229969.png"
+                          alt="avatar">
+                        <div class="grid gap-1">
+                          <h5 class="text-gray-900 font-medium transition-all duration-500  ">Jane D</h5>
+                          <span class="text-sm leading-6 text-gray-500">CEO </span>
+                        </div>
+                      </div>
+                      <div class="flex items-center mb-5 sm:mb-9 gap-2 text-amber-500 transition-all duration-500  ">
+                        <svg class="w-5 h-5" viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path
+                            d="M8.10326 1.31699C8.47008 0.57374 9.52992 0.57374 9.89674 1.31699L11.7063 4.98347C11.8519 5.27862 12.1335 5.48319 12.4592 5.53051L16.5054 6.11846C17.3256 6.23765 17.6531 7.24562 17.0596 7.82416L14.1318 10.6781C13.8961 10.9079 13.7885 11.2389 13.8442 11.5632L14.5353 15.5931C14.6754 16.41 13.818 17.033 13.0844 16.6473L9.46534 14.7446C9.17402 14.5915 8.82598 14.5915 8.53466 14.7446L4.91562 16.6473C4.18199 17.033 3.32456 16.41 3.46467 15.5931L4.15585 11.5632C4.21148 11.2389 4.10393 10.9079 3.86825 10.6781L0.940384 7.82416C0.346867 7.24562 0.674378 6.23765 1.4946 6.11846L5.54081 5.53051C5.86652 5.48319 6.14808 5.27862 6.29374 4.98347L8.10326 1.31699Z"
+                            fill="currentColor"></path>
+                        </svg>
+                        <svg class="w-5 h-5" viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path
+                            d="M8.10326 1.31699C8.47008 0.57374 9.52992 0.57374 9.89674 1.31699L11.7063 4.98347C11.8519 5.27862 12.1335 5.48319 12.4592 5.53051L16.5054 6.11846C17.3256 6.23765 17.6531 7.24562 17.0596 7.82416L14.1318 10.6781C13.8961 10.9079 13.7885 11.2389 13.8442 11.5632L14.5353 15.5931C14.6754 16.41 13.818 17.033 13.0844 16.6473L9.46534 14.7446C9.17402 14.5915 8.82598 14.5915 8.53466 14.7446L4.91562 16.6473C4.18199 17.033 3.32456 16.41 3.46467 15.5931L4.15585 11.5632C4.21148 11.2389 4.10393 10.9079 3.86825 10.6781L0.940384 7.82416C0.346867 7.24562 0.674378 6.23765 1.4946 6.11846L5.54081 5.53051C5.86652 5.48319 6.14808 5.27862 6.29374 4.98347L8.10326 1.31699Z"
+                            fill="currentColor"></path>
+                        </svg>
+                        <svg class="w-5 h-5" viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path
+                            d="M8.10326 1.31699C8.47008 0.57374 9.52992 0.57374 9.89674 1.31699L11.7063 4.98347C11.8519 5.27862 12.1335 5.48319 12.4592 5.53051L16.5054 6.11846C17.3256 6.23765 17.6531 7.24562 17.0596 7.82416L14.1318 10.6781C13.8961 10.9079 13.7885 11.2389 13.8442 11.5632L14.5353 15.5931C14.6754 16.41 13.818 17.033 13.0844 16.6473L9.46534 14.7446C9.17402 14.5915 8.82598 14.5915 8.53466 14.7446L4.91562 16.6473C4.18199 17.033 3.32456 16.41 3.46467 15.5931L4.15585 11.5632C4.21148 11.2389 4.10393 10.9079 3.86825 10.6781L0.940384 7.82416C0.346867 7.24562 0.674378 6.23765 1.4946 6.11846L5.54081 5.53051C5.86652 5.48319 6.14808 5.27862 6.29374 4.98347L8.10326 1.31699Z"
+                            fill="currentColor"></path>
+                        </svg>
+                        <svg class="w-5 h-5" viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path
+                            d="M8.10326 1.31699C8.47008 0.57374 9.52992 0.57374 9.89674 1.31699L11.7063 4.98347C11.8519 5.27862 12.1335 5.48319 12.4592 5.53051L16.5054 6.11846C17.3256 6.23765 17.6531 7.24562 17.0596 7.82416L14.1318 10.6781C13.8961 10.9079 13.7885 11.2389 13.8442 11.5632L14.5353 15.5931C14.6754 16.41 13.818 17.033 13.0844 16.6473L9.46534 14.7446C9.17402 14.5915 8.82598 14.5915 8.53466 14.7446L4.91562 16.6473C4.18199 17.033 3.32456 16.41 3.46467 15.5931L4.15585 11.5632C4.21148 11.2389 4.10393 10.9079 3.86825 10.6781L0.940384 7.82416C0.346867 7.24562 0.674378 6.23765 1.4946 6.11846L5.54081 5.53051C5.86652 5.48319 6.14808 5.27862 6.29374 4.98347L8.10326 1.31699Z"
+                            fill="currentColor"></path>
+                        </svg>
+                        <svg class="w-5 h-5" viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path
+                            d="M8.10326 1.31699C8.47008 0.57374 9.52992 0.57374 9.89674 1.31699L11.7063 4.98347C11.8519 5.27862 12.1335 5.48319 12.4592 5.53051L16.5054 6.11846C17.3256 6.23765 17.6531 7.24562 17.0596 7.82416L14.1318 10.6781C13.8961 10.9079 13.7885 11.2389 13.8442 11.5632L14.5353 15.5931C14.6754 16.41 13.818 17.033 13.0844 16.6473L9.46534 14.7446C9.17402 14.5915 8.82598 14.5915 8.53466 14.7446L4.91562 16.6473C4.18199 17.033 3.32456 16.41 3.46467 15.5931L4.15585 11.5632C4.21148 11.2389 4.10393 10.9079 3.86825 10.6781L0.940384 7.82416C0.346867 7.24562 0.674378 6.23765 1.4946 6.11846L5.54081 5.53051C5.86652 5.48319 6.14808 5.27862 6.29374 4.98347L8.10326 1.31699Z"
+                            fill="currentColor"></path>
+                        </svg>
+                      </div>
+                      <p
+                        class="text-sm text-gray-500 leading-6 transition-all duration-500 min-h-24 group-hover:text-gray-800">
+                        The user interface of this pagedone is so intuitive, I was able to start using it
+                        without any guidance.
+                      </p>
+
+                    </div>
+                    <div
+                      class="swiper-slide group bg-white border border-solid border-gray-300 rounded-2xl max-sm:max-w-sm max-sm:mx-auto p-6 transition-all duration-500 hover:border-indigo-600">
+                      <div class="flex items-center gap-5 mb-5 sm:mb-9">
+                        <img class="rounded-full object-cover" src="	https://pagedone.io/asset/uploads/1696229994.png"
+                          alt="avatar">
+                        <div class="grid gap-1">
+                          <h5 class="text-gray-900 font-medium transition-all duration-500  ">Harsh P.
+                          </h5>
+                          <span class="text-sm leading-6 text-gray-500">Product Designer </span>
+                        </div>
+                      </div>
+                      <div class="flex items-center mb-5 sm:mb-9 gap-2 text-amber-500 transition-all duration-500  ">
+                        <svg class="w-5 h-5" viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path
+                            d="M8.10326 1.31699C8.47008 0.57374 9.52992 0.57374 9.89674 1.31699L11.7063 4.98347C11.8519 5.27862 12.1335 5.48319 12.4592 5.53051L16.5054 6.11846C17.3256 6.23765 17.6531 7.24562 17.0596 7.82416L14.1318 10.6781C13.8961 10.9079 13.7885 11.2389 13.8442 11.5632L14.5353 15.5931C14.6754 16.41 13.818 17.033 13.0844 16.6473L9.46534 14.7446C9.17402 14.5915 8.82598 14.5915 8.53466 14.7446L4.91562 16.6473C4.18199 17.033 3.32456 16.41 3.46467 15.5931L4.15585 11.5632C4.21148 11.2389 4.10393 10.9079 3.86825 10.6781L0.940384 7.82416C0.346867 7.24562 0.674378 6.23765 1.4946 6.11846L5.54081 5.53051C5.86652 5.48319 6.14808 5.27862 6.29374 4.98347L8.10326 1.31699Z"
+                            fill="currentColor"></path>
+                        </svg>
+                        <svg class="w-5 h-5" viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path
+                            d="M8.10326 1.31699C8.47008 0.57374 9.52992 0.57374 9.89674 1.31699L11.7063 4.98347C11.8519 5.27862 12.1335 5.48319 12.4592 5.53051L16.5054 6.11846C17.3256 6.23765 17.6531 7.24562 17.0596 7.82416L14.1318 10.6781C13.8961 10.9079 13.7885 11.2389 13.8442 11.5632L14.5353 15.5931C14.6754 16.41 13.818 17.033 13.0844 16.6473L9.46534 14.7446C9.17402 14.5915 8.82598 14.5915 8.53466 14.7446L4.91562 16.6473C4.18199 17.033 3.32456 16.41 3.46467 15.5931L4.15585 11.5632C4.21148 11.2389 4.10393 10.9079 3.86825 10.6781L0.940384 7.82416C0.346867 7.24562 0.674378 6.23765 1.4946 6.11846L5.54081 5.53051C5.86652 5.48319 6.14808 5.27862 6.29374 4.98347L8.10326 1.31699Z"
+                            fill="currentColor"></path>
+                        </svg>
+                        <svg class="w-5 h-5" viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path
+                            d="M8.10326 1.31699C8.47008 0.57374 9.52992 0.57374 9.89674 1.31699L11.7063 4.98347C11.8519 5.27862 12.1335 5.48319 12.4592 5.53051L16.5054 6.11846C17.3256 6.23765 17.6531 7.24562 17.0596 7.82416L14.1318 10.6781C13.8961 10.9079 13.7885 11.2389 13.8442 11.5632L14.5353 15.5931C14.6754 16.41 13.818 17.033 13.0844 16.6473L9.46534 14.7446C9.17402 14.5915 8.82598 14.5915 8.53466 14.7446L4.91562 16.6473C4.18199 17.033 3.32456 16.41 3.46467 15.5931L4.15585 11.5632C4.21148 11.2389 4.10393 10.9079 3.86825 10.6781L0.940384 7.82416C0.346867 7.24562 0.674378 6.23765 1.4946 6.11846L5.54081 5.53051C5.86652 5.48319 6.14808 5.27862 6.29374 4.98347L8.10326 1.31699Z"
+                            fill="currentColor"></path>
+                        </svg>
+                        <svg class="w-5 h-5" viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path
+                            d="M8.10326 1.31699C8.47008 0.57374 9.52992 0.57374 9.89674 1.31699L11.7063 4.98347C11.8519 5.27862 12.1335 5.48319 12.4592 5.53051L16.5054 6.11846C17.3256 6.23765 17.6531 7.24562 17.0596 7.82416L14.1318 10.6781C13.8961 10.9079 13.7885 11.2389 13.8442 11.5632L14.5353 15.5931C14.6754 16.41 13.818 17.033 13.0844 16.6473L9.46534 14.7446C9.17402 14.5915 8.82598 14.5915 8.53466 14.7446L4.91562 16.6473C4.18199 17.033 3.32456 16.41 3.46467 15.5931L4.15585 11.5632C4.21148 11.2389 4.10393 10.9079 3.86825 10.6781L0.940384 7.82416C0.346867 7.24562 0.674378 6.23765 1.4946 6.11846L5.54081 5.53051C5.86652 5.48319 6.14808 5.27862 6.29374 4.98347L8.10326 1.31699Z"
+                            fill="currentColor"></path>
+                        </svg>
+                        <svg class="w-5 h-5" viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path
+                            d="M8.10326 1.31699C8.47008 0.57374 9.52992 0.57374 9.89674 1.31699L11.7063 4.98347C11.8519 5.27862 12.1335 5.48319 12.4592 5.53051L16.5054 6.11846C17.3256 6.23765 17.6531 7.24562 17.0596 7.82416L14.1318 10.6781C13.8961 10.9079 13.7885 11.2389 13.8442 11.5632L14.5353 15.5931C14.6754 16.41 13.818 17.033 13.0844 16.6473L9.46534 14.7446C9.17402 14.5915 8.82598 14.5915 8.53466 14.7446L4.91562 16.6473C4.18199 17.033 3.32456 16.41 3.46467 15.5931L4.15585 11.5632C4.21148 11.2389 4.10393 10.9079 3.86825 10.6781L0.940384 7.82416C0.346867 7.24562 0.674378 6.23765 1.4946 6.11846L5.54081 5.53051C5.86652 5.48319 6.14808 5.27862 6.29374 4.98347L8.10326 1.31699Z"
+                            fill="currentColor"></path>
+                        </svg>
+                      </div>
+                      <p
+                        class="text-sm text-gray-500 leading-6 transition-all duration-500 min-h-24 group-hover:text-gray-800">
+                        I used to dread doing my taxes every year, but pagedone has made the process so much
+                        simpler and stress-free.
+                      </p>
+
+                    </div>
                   </div>
-                  <div>
-                    <h4 class="font-bold text-gray-900 dark:text-white text-sm">
-                      Dinesh Kumar
-                    </h4>
-                    <p class="text-xs text-gray-500 dark:text-gray-400">
-                      Public Works Dept.
-                    </p>
-                  </div>
                 </div>
-                <div class="flex text-yellow-400 text-xs">★★★★★</div>
               </div>
             </div>
           </div>
-        </div>
+        </section>
+
       </div>
     </section>
 
-<section id="infratoday" class="relative py-24 bg-gray-50 dark:bg-slate-950 overflow-hidden transition-colors duration-300">
+    <section id="infratoday"
+      class="relative  bg-gray-50 dark:bg-slate-950 overflow-hidden transition-colors duration-300">
 
-      <div class="absolute top-0 right-0 -mt-20 -mr-20 w-96 h-96 bg-accent/10 rounded-full blur-3xl pointer-events-none"></div>
-      <div class="absolute bottom-0 left-0 -mb-20 -ml-20 w-80 h-80 bg-primary/10 dark:bg-accent/5 rounded-full blur-3xl pointer-events-none"></div>
+      <div
+        class="absolute top-0 right-0 -mt-20 -mr-20 w-96 h-96 bg-accent/10 rounded-full blur-3xl pointer-events-none">
+      </div>
+      <div
+        class="absolute bottom-0 left-0 -mb-20 -ml-20 w-80 h-80 bg-primary/10 dark:bg-accent/5 rounded-full blur-3xl pointer-events-none">
+      </div>
 
       <div class="container-custom relative z-10">
-        
+
         <div class="max-w-4xl mx-auto text-center mb-16 reveal">
-            <span class="inline-block py-1 px-3 rounded-full bg-accent/10 text-accent text-xs font-bold tracking-widest uppercase mb-4 border border-accent/20">
-                Coming Soon
-            </span>
-            <h2 class="text-4xl md:text-5xl lg:text-6xl font-bold font-heading text-primary dark:text-white mb-6 leading-tight">
-                InfraToday
-            </h2>
-            <p class="text-xl md:text-2xl font-medium text-secondary dark:text-slate-300 leading-relaxed font-body">
-                Built with ambition. Engineered for impact.
-            </p>
-            <p class="mt-6 text-gray-600 dark:text-gray-400 max-w-2xl mx-auto leading-relaxed">
-                A new force in India’s evolving infrastructure landscape. Bridging global best practices with on‑ground realities.
-            </p>
+          <span
+            class="inline-block py-1 px-3 rounded-full bg-accent/10 text-accent text-xs font-bold tracking-widest uppercase mb-4 border border-accent/20">
+            Coming Soon
+          </span>
+          <h2
+            class="text-4xl md:text-5xl lg:text-6xl font-bold font-heading text-primary dark:text-white mb-6 leading-tight">
+            InfraToday
+          </h2>
+          <p class="text-xl md:text-2xl font-medium text-secondary dark:text-slate-300 leading-relaxed font-body">
+            Built with ambition. Engineered for impact.
+          </p>
+          <p class="mt-6 text-gray-600 dark:text-gray-400 max-w-2xl mx-auto leading-relaxed">
+            A new force in India’s evolving infrastructure landscape. Bridging global best practices with on‑ground
+            realities.
+          </p>
         </div>
 
         <div class="grid lg:grid-cols-12 gap-12 items-start mb-20">
-            
-            <div class="lg:col-span-7 space-y-8 reveal">
-                <div class="bg-white dark:bg-slate-900 p-8 rounded-2xl shadow-sm border border-gray-100 dark:border-slate-800 relative overflow-hidden group hover:border-accent/30 transition-colors duration-300">
-                    <div class="absolute top-0 left-0 w-1 h-full bg-accent"></div>
-                    
-                    <h3 class="text-2xl font-bold font-heading text-primary dark:text-white mb-4">Our Philosophy</h3>
-                    <p class="text-secondary dark:text-gray-300 leading-relaxed mb-4">
-                        Backed by real-world experience across civil, water, and wastewater engineering, our philosophy blends <span class="text-accent font-semibold">precision, discipline, and future‑ready thinking</span>.
-                    </p>
-                    <p class="text-gray-600 dark:text-gray-400 leading-relaxed">
-                        Our early focus on public and government-sector infrastructure will establish our operational credibility, forming the foundation for future expansion.
-                    </p>
-                </div>
 
+          <div class="lg:col-span-7 space-y-8 reveal">
+            <div
+              class="bg-white dark:bg-slate-900 p-8 rounded-2xl shadow-sm border border-gray-100 dark:border-slate-800 relative overflow-hidden group hover:border-accent/30 transition-colors duration-300">
+              <div class="absolute top-0 left-0 w-1 h-full bg-accent"></div>
+
+              <h3 class="text-2xl font-bold font-heading text-primary dark:text-white mb-4">Our Philosophy</h3>
+              <p class="text-secondary dark:text-gray-300 leading-relaxed mb-4">
+                Backed by real-world experience across civil, water, and wastewater engineering, our philosophy blends
+                <span class="text-accent font-semibold">precision, discipline, and future‑ready thinking</span>.
+              </p>
+              <p class="text-gray-600 dark:text-gray-400 leading-relaxed">
+                Our early focus on public and government-sector infrastructure will establish our operational
+                credibility, forming the foundation for future expansion.
+              </p>
             </div>
 
-            
+          </div>
+
+
         </div>
 
         <div class="grid md:grid-cols-3 gap-6 mb-16 reveal delay-300">
-            <div class="group bg-white dark:bg-slate-900 p-6 rounded-xl border border-gray-100 dark:border-slate-800 hover:border-accent/50 hover:shadow-lg hover:shadow-accent/5 transition-all duration-300">
-                <div class="w-12 h-12 bg-accent/10 rounded-lg flex items-center justify-center mb-4 text-accent">
-                    <i class="fas fa-ruler-combined text-xl"></i>
-                </div>
-                <h4 class="text-lg font-bold font-heading text-primary dark:text-white mb-2">Quality that can be measured</h4>
-                <p class="text-sm text-secondary dark:text-gray-400 leading-relaxed">
-                    Data-driven planning to ensure durability and precision in every square foot.
-                </p>
+          <div
+            class="group bg-white dark:bg-slate-900 p-6 rounded-xl border border-gray-100 dark:border-slate-800 hover:border-accent/50 hover:shadow-lg hover:shadow-accent/5 transition-all duration-300">
+            <div class="w-12 h-12 bg-accent/10 rounded-lg flex items-center justify-center mb-4 text-accent">
+              <i class="fas fa-ruler-combined text-xl"></i>
             </div>
+            <h4 class="text-lg font-bold font-heading text-primary dark:text-white mb-2">Quality that can be measured
+            </h4>
+            <p class="text-sm text-secondary dark:text-gray-400 leading-relaxed">
+              Data-driven planning to ensure durability and precision in every square foot.
+            </p>
+          </div>
 
-            <div class="group bg-white dark:bg-slate-900 p-6 rounded-xl border border-gray-100 dark:border-slate-800 hover:border-accent/50 hover:shadow-lg hover:shadow-accent/5 transition-all duration-300">
-                <div class="w-12 h-12 bg-accent/10 rounded-lg flex items-center justify-center mb-4 text-accent">
-                    <i class="fas fa-shield-alt text-xl"></i>
-                </div>
-                <h4 class="text-lg font-bold font-heading text-primary dark:text-white mb-2">Safety that can be trusted</h4>
-                <p class="text-sm text-secondary dark:text-gray-400 leading-relaxed">
-                    Uncompromising QHSE standards. Safe for workers, safe for the future.
-                </p>
+          <div
+            class="group bg-white dark:bg-slate-900 p-6 rounded-xl border border-gray-100 dark:border-slate-800 hover:border-accent/50 hover:shadow-lg hover:shadow-accent/5 transition-all duration-300">
+            <div class="w-12 h-12 bg-accent/10 rounded-lg flex items-center justify-center mb-4 text-accent">
+              <i class="fas fa-shield-alt text-xl"></i>
             </div>
+            <h4 class="text-lg font-bold font-heading text-primary dark:text-white mb-2">Safety that can be trusted</h4>
+            <p class="text-sm text-secondary dark:text-gray-400 leading-relaxed">
+              Uncompromising QHSE standards. Safe for workers, safe for the future.
+            </p>
+          </div>
 
-            <div class="group bg-white dark:bg-slate-900 p-6 rounded-xl border border-gray-100 dark:border-slate-800 hover:border-accent/50 hover:shadow-lg hover:shadow-accent/5 transition-all duration-300">
-                <div class="w-12 h-12 bg-accent/10 rounded-lg flex items-center justify-center mb-4 text-accent">
-                    <i class="fas fa-chart-line text-xl"></i>
-                </div>
-                <h4 class="text-lg font-bold font-heading text-primary dark:text-white mb-2">Delivery with Confidence</h4>
-                <p class="text-sm text-secondary dark:text-gray-400 leading-relaxed">
-                    Planning that saves cost without compromising performance or timelines.
-                </p>
+          <div
+            class="group bg-white dark:bg-slate-900 p-6 rounded-xl border border-gray-100 dark:border-slate-800 hover:border-accent/50 hover:shadow-lg hover:shadow-accent/5 transition-all duration-300">
+            <div class="w-12 h-12 bg-accent/10 rounded-lg flex items-center justify-center mb-4 text-accent">
+              <i class="fas fa-chart-line text-xl"></i>
             </div>
+            <h4 class="text-lg font-bold font-heading text-primary dark:text-white mb-2">Delivery with Confidence</h4>
+            <p class="text-sm text-secondary dark:text-gray-400 leading-relaxed">
+              Planning that saves cost without compromising performance or timelines.
+            </p>
+          </div>
         </div>
 
         <div class="text-center border-t border-gray-200 dark:border-slate-800 pt-12 reveal">
-            <p class="text-gray-500 dark:text-gray-400 italic mb-6 font-medium">
-               
-            </p>
-            <a href="#contact" class="inline-flex items-center gap-2 px-8 py-4 bg-accent hover:bg-amber-600 text-white font-bold rounded-full shadow-lg shadow-accent/20 hover:-translate-y-1 transition-all duration-300">
-                Get Early Updates
-                <i class="fas fa-arrow-right ml-1"></i>
-            </a>
+          <p class="text-gray-500 dark:text-gray-400 italic mb-6 font-medium">
+
+          </p>
+          <a href="#contact"
+            class="inline-flex items-center gap-2 px-8 py-4 bg-accent hover:bg-amber-600 text-white font-bold rounded-full shadow-lg shadow-accent/20 hover:-translate-y-1 transition-all duration-300">
+            Get Early Updates
+            <i class="fas fa-arrow-right ml-1"></i>
+          </a>
         </div>
 
       </div>
@@ -1155,6 +1328,7 @@
       </div>
     </div>
   </footer>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script src="script.js"></script>
 
   <!-- Floating Buttons -->

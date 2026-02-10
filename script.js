@@ -43,14 +43,14 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
 
-if (backToTopBtn) {
-    backToTopBtn.addEventListener("click", () => {
+    if (backToTopBtn) {
+      backToTopBtn.addEventListener("click", () => {
         window.scrollTo({
-            top: 0,
-            behavior: "smooth"
+          top: 0,
+          behavior: "smooth"
         });
-    });
-}
+      });
+    }
 
     // Scrollspy
     let current = "";
@@ -213,15 +213,15 @@ if (backToTopBtn) {
   const projectsData = [
     {
       id: "bustamante",
-      title: "Bustamante Headworks",
-      impactMetric: "$180M USD",
+      title: "Bustamante Headworks Improvement",
+      impactMetric: "Wastewater Treatment Facility",
       regionCode: "ELP / USA",
       timeline: "2024-2026",
       role: "Project Engineer",
-      category: "Water Tech",
+      category: "Industrial",
       cords: "31.76°N 106.45°W",
       complexity: 88,
-      brief: "PMC/TPMC services for comprehensive Wastewater Treatment Plant improvements, scaling capacity from 39 MGD to 51 MGD. Managed critical RFI/Submittals regarding mechanical systems and structural reinforcements.",
+      brief: "Supported PMC/TPMC (third‑party CM) services for the R.R. Bustamante WWTP Headworks Improvements program for El Paso Water, delivering a phased capacity increase from 39 MGD to 51 MGD.  Performed daily site rounds, coordinated field inspections and material testing, and verified construction compliance against IFC drawings, specifications, and contract documents; driving QA/QC closure similar to WIR/MIR closeouts used on Indian sites.  Managed RFI/Submittal control in Procore (akin to maintaining a TQ/Submittal Register), maintained stored material/equipment logs, and verified quantities supporting contractor pay applications (RA bill–type checks).  Supported VO/Change Order and contingency documentation by coordinating between the Client, Contractor, and EOR, and monitored baseline vs. actual progress through contractor schedule updates to track the critical path and flag slippages early in weekly PRMs with clear, data‑driven reporting.",
       techSpecs: [
         { label: "Capacity Upgrade", value: "39 MGD → 51 MGD" },
         { label: "System Type", value: "Activated Sludge" },
@@ -230,12 +230,12 @@ if (backToTopBtn) {
     },
     {
       id: "pune-metro",
-      title: "MAHA Metro Rail",
-      impactMetric: "₹11,420 Cr",
+      title: "MAHA Metro Rail- Pune Metro",
+      impactMetric: "Railway Infrastructure",
       regionCode: "PNQ / IND",
       timeline: "2021",
       role: "Site Engineer Intern",
-      category: "Transport",
+      category: "Transportation",
       cords: "18.52°N 73.85°E",
       complexity: 92,
       brief: "Execution of elevated and underground corridors for the Pune Metro Rail project. Supervised viaduct precast segment erection and tunneling operations ensuring zero safety incidents.",
@@ -248,7 +248,7 @@ if (backToTopBtn) {
     {
       id: "bits-goa",
       title: "BITS Goa Campus",
-      impactMetric: "INST. EXPANSION",
+      impactMetric: "Student Housing",
       regionCode: "GOA / IND",
       timeline: "2021",
       role: "Proj. Eng. Intern",
@@ -264,12 +264,12 @@ if (backToTopBtn) {
     },
     {
       id: "transmission-tower",
-      title: "Transmission Tower",
-      impactMetric: "GEOTECH FND",
+      title: "Transmission Tower Replacement",
+      impactMetric: "Power Infra",
       regionCode: "PHX / USA",
       timeline: "2023",
       role: "Associate",
-      category: "Power Infra",
+      category: "Industrial",
       cords: "33.44°N 112.07°W",
       complexity: 65,
       brief: "Geotechnical planning for tower replacement. Analyzed subsurface constraints to determine foundation suitability and shaft excavation parameters.",
@@ -282,11 +282,11 @@ if (backToTopBtn) {
     {
       id: "sepc-comms",
       title: "ASU SEPC Logistics",
-      impactMetric: "NW CABLING",
-      regionCode: "TEM / USA",
+      impactMetric: "Underground Utilities",
+      regionCode: "PHX/USA",
       timeline: "2023",
       role: "Associate",
-      category: "Systems",
+      category: "Communication Systems",
       cords: "33.42°N 111.93°W",
       complexity: 70,
       brief: "Structured cabling layout and site logistics for the ASU SEPC facility. Ensured reliability of communication lines through rigorous material staging and pathway coordination.",
@@ -415,5 +415,169 @@ if (backToTopBtn) {
       }
     });
   }
+
+  // --- Testimonial Slider Logic ---
+  const testimonialTrack = document.getElementById("testimonials-track");
+
+  if (testimonialTrack) {
+    const slides = document.querySelectorAll(".testimonial-slide");
+    const prevBtn = document.getElementById("prev-test-btn");
+    const nextBtn = document.getElementById("next-test-btn");
+    const prevBtnMobile = document.getElementById("prev-test-btn-mobile");
+    const nextBtnMobile = document.getElementById("next-test-btn-mobile");
+    const dots = document.querySelectorAll("#testimonial-indicators span");
+    const innerPrevBtns = document.querySelectorAll(".testimonial-prev-btn"); // New internal buttons
+    const innerNextBtns = document.querySelectorAll(".testimonial-next-btn"); // New internal buttons
+
+    let currentSlide = 0;
+    const totalSlides = slides.length;
+    let slideInterval;
+
+    // Function to update the UI
+    const updateSlider = () => {
+      // 1. Move the track
+      testimonialTrack.style.transform = `translateX(-${currentSlide * 100}%)`;
+
+      // 2. Update Dots
+      dots.forEach((dot, index) => {
+        if (index === currentSlide) {
+          dot.classList.add("bg-accent", "scale-125", "shadow-md");
+          dot.classList.remove("bg-gray-300", "dark:bg-slate-600", "hover:bg-accent/50", "hover:scale-110");
+        } else {
+          dot.classList.remove("bg-accent", "scale-125", "shadow-md");
+          dot.classList.add("bg-gray-300", "dark:bg-slate-600", "hover:bg-accent/50", "hover:scale-110");
+        }
+      });
+    };
+
+    // Navigation Functions
+    const goToNextSlide = () => {
+      currentSlide = (currentSlide + 1) % totalSlides;
+      updateSlider();
+    };
+
+    const goToPrevSlide = () => {
+      currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+      updateSlider();
+    };
+
+    const goToSlide = (index) => {
+      currentSlide = index;
+      updateSlider();
+    };
+
+    // Timer Logic
+    const startAutoSlide = () => {
+      slideInterval = setInterval(goToNextSlide, 6000); // 6 seconds per slide
+    };
+
+    const stopAutoSlide = () => {
+      clearInterval(slideInterval);
+    };
+
+    const resetAutoSlide = () => {
+      stopAutoSlide();
+      startAutoSlide();
+    };
+
+
+    // --- Event Listeners ---
+
+    // External Desktop Buttons
+    if (nextBtn) {
+      nextBtn.addEventListener("click", () => {
+        goToNextSlide();
+        resetAutoSlide();
+      });
+    }
+
+    if (prevBtn) {
+      prevBtn.addEventListener("click", () => {
+        goToPrevSlide();
+        resetAutoSlide();
+      });
+    }
+
+    // Mobile Buttons
+    if (nextBtnMobile) {
+      nextBtnMobile.addEventListener("click", () => {
+        goToNextSlide();
+        resetAutoSlide();
+      });
+    }
+
+    if (prevBtnMobile) {
+      prevBtnMobile.addEventListener("click", () => {
+        goToPrevSlide();
+        resetAutoSlide();
+      });
+    }
+
+    // Internal Card Buttons (New)
+    innerNextBtns.forEach(btn => {
+      btn.addEventListener("click", (e) => {
+        e.stopPropagation(); // Prevent bubbling up to card if needed
+        goToNextSlide();
+        resetAutoSlide();
+      });
+    });
+
+    innerPrevBtns.forEach(btn => {
+      btn.addEventListener("click", (e) => {
+        e.stopPropagation();
+        goToPrevSlide();
+        resetAutoSlide();
+      });
+    });
+
+    // Dot Indicators
+    dots.forEach((dot, index) => {
+      dot.addEventListener("click", () => {
+        goToSlide(index);
+        resetAutoSlide();
+      });
+    });
+
+    // Pause on Hover
+    // We attach this to the parent container so hovering anywhere on the slider pauses it
+    const sliderContainer = testimonialTrack.parentElement;
+    sliderContainer.addEventListener("mouseenter", stopAutoSlide);
+    sliderContainer.addEventListener("mouseleave", startAutoSlide);
+
+    // Initialization
+    updateSlider();
+    startAutoSlide();
+  }
+
 });
 
+
+
+var swiper = new Swiper(".mySwiper", {
+  slidesPerView: 1,
+  spaceBetween: 32,
+  loop: true,
+  centeredSlides: true,
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+  breakpoints: {
+    640: {
+      slidesPerView: 1,
+      spaceBetween: 20,
+    },
+    768: {
+      slidesPerView: 1,
+      spaceBetween: 40,
+    },
+    1024: {
+      slidesPerView: 1,
+      spaceBetween: 50,
+    },
+  },
+});
