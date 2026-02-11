@@ -416,168 +416,37 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // --- Testimonial Slider Logic ---
-  const testimonialTrack = document.getElementById("testimonials-track");
-
-  if (testimonialTrack) {
-    const slides = document.querySelectorAll(".testimonial-slide");
-    const prevBtn = document.getElementById("prev-test-btn");
-    const nextBtn = document.getElementById("next-test-btn");
-    const prevBtnMobile = document.getElementById("prev-test-btn-mobile");
-    const nextBtnMobile = document.getElementById("next-test-btn-mobile");
-    const dots = document.querySelectorAll("#testimonial-indicators span");
-    const innerPrevBtns = document.querySelectorAll(".testimonial-prev-btn"); // New internal buttons
-    const innerNextBtns = document.querySelectorAll(".testimonial-next-btn"); // New internal buttons
-
-    let currentSlide = 0;
-    const totalSlides = slides.length;
-    let slideInterval;
-
-    // Function to update the UI
-    const updateSlider = () => {
-      // 1. Move the track
-      testimonialTrack.style.transform = `translateX(-${currentSlide * 100}%)`;
-
-      // 2. Update Dots
-      dots.forEach((dot, index) => {
-        if (index === currentSlide) {
-          dot.classList.add("bg-accent", "scale-125", "shadow-md");
-          dot.classList.remove("bg-gray-300", "dark:bg-slate-600", "hover:bg-accent/50", "hover:scale-110");
-        } else {
-          dot.classList.remove("bg-accent", "scale-125", "shadow-md");
-          dot.classList.add("bg-gray-300", "dark:bg-slate-600", "hover:bg-accent/50", "hover:scale-110");
-        }
-      });
-    };
-
-    // Navigation Functions
-    const goToNextSlide = () => {
-      currentSlide = (currentSlide + 1) % totalSlides;
-      updateSlider();
-    };
-
-    const goToPrevSlide = () => {
-      currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
-      updateSlider();
-    };
-
-    const goToSlide = (index) => {
-      currentSlide = index;
-      updateSlider();
-    };
-
-    // Timer Logic
-    const startAutoSlide = () => {
-      slideInterval = setInterval(goToNextSlide, 6000); // 6 seconds per slide
-    };
-
-    const stopAutoSlide = () => {
-      clearInterval(slideInterval);
-    };
-
-    const resetAutoSlide = () => {
-      stopAutoSlide();
-      startAutoSlide();
-    };
-
-
-    // --- Event Listeners ---
-
-    // External Desktop Buttons
-    if (nextBtn) {
-      nextBtn.addEventListener("click", () => {
-        goToNextSlide();
-        resetAutoSlide();
-      });
-    }
-
-    if (prevBtn) {
-      prevBtn.addEventListener("click", () => {
-        goToPrevSlide();
-        resetAutoSlide();
-      });
-    }
-
-    // Mobile Buttons
-    if (nextBtnMobile) {
-      nextBtnMobile.addEventListener("click", () => {
-        goToNextSlide();
-        resetAutoSlide();
-      });
-    }
-
-    if (prevBtnMobile) {
-      prevBtnMobile.addEventListener("click", () => {
-        goToPrevSlide();
-        resetAutoSlide();
-      });
-    }
-
-    // Internal Card Buttons (New)
-    innerNextBtns.forEach(btn => {
-      btn.addEventListener("click", (e) => {
-        e.stopPropagation(); // Prevent bubbling up to card if needed
-        goToNextSlide();
-        resetAutoSlide();
-      });
-    });
-
-    innerPrevBtns.forEach(btn => {
-      btn.addEventListener("click", (e) => {
-        e.stopPropagation();
-        goToPrevSlide();
-        resetAutoSlide();
-      });
-    });
-
-    // Dot Indicators
-    dots.forEach((dot, index) => {
-      dot.addEventListener("click", () => {
-        goToSlide(index);
-        resetAutoSlide();
-      });
-    });
-
-    // Pause on Hover
-    // We attach this to the parent container so hovering anywhere on the slider pauses it
-    const sliderContainer = testimonialTrack.parentElement;
-    sliderContainer.addEventListener("mouseenter", stopAutoSlide);
-    sliderContainer.addEventListener("mouseleave", startAutoSlide);
-
-    // Initialization
-    updateSlider();
-    startAutoSlide();
-  }
-
-});
-
-
-
-var swiper = new Swiper(".mySwiper", {
-  slidesPerView: 1,
-  spaceBetween: 32,
-  loop: true,
-  centeredSlides: true,
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true,
-  },
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
-  },
-  breakpoints: {
-    640: {
-      slidesPerView: 1,
-      spaceBetween: 20,
+  // --- Testimonial Swiper Initialization ---
+  const testimonialSwiper = new Swiper('.mySwiper', {
+    slidesPerView: 1,
+    spaceBetween: 30,
+    loop: true,
+    autoplay: {
+      delay: 5000,
+      disableOnInteraction: false,
+      pauseOnMouseEnter: true,
     },
-    768: {
-      slidesPerView: 1,
-      spaceBetween: 40,
+    speed: 800,
+    effect: 'slide',
+    navigation: {
+      nextEl: '#slider-button-right',
+      prevEl: '#slider-button-left',
     },
-    1024: {
-      slidesPerView: 1,
-      spaceBetween: 50,
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+      dynamicBullets: true,
     },
-  },
+    keyboard: {
+      enabled: true,
+      onlyInViewport: true,
+    },
+    grabCursor: true,
+    on: {
+      init: function () {
+        console.log('Testimonial Swiper initialized');
+      },
+    },
+  });
+
 });
