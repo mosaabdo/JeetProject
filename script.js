@@ -449,4 +449,47 @@ document.addEventListener("DOMContentLoaded", () => {
     },
   });
 
+  // --- Countdown Timer ---
+  const initCountdown = () => {
+    const daysEl = document.getElementById("days");
+    const hoursEl = document.getElementById("hours");
+    const minutesEl = document.getElementById("minutes");
+    const secondsEl = document.getElementById("seconds");
+
+    // Only run if elements exist
+    if (!daysEl || !hoursEl || !minutesEl || !secondsEl) return;
+
+    // Set launch date (e.g., 14 days from now)
+    const launchDate = new Date();
+    launchDate.setDate(launchDate.getDate() + 14);
+
+    const updateTimer = () => {
+      const now = new Date().getTime();
+      const distance = launchDate - now;
+
+      if (distance < 0) {
+        // Launch!
+        daysEl.innerText = "00";
+        hoursEl.innerText = "00";
+        minutesEl.innerText = "00";
+        secondsEl.innerText = "00";
+        return;
+      }
+
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+      daysEl.innerText = days < 10 ? `0${days}` : days;
+      hoursEl.innerText = hours < 10 ? `0${hours}` : hours;
+      minutesEl.innerText = minutes < 10 ? `0${minutes}` : minutes;
+      secondsEl.innerText = seconds < 10 ? `0${seconds}` : seconds;
+    };
+
+    setInterval(updateTimer, 1000);
+    updateTimer(); // Initial call
+  };
+  initCountdown();
+
 });
