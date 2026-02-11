@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-  console.log("Jeet Badki Portfolio Loaded | Antigravity Audit");
+  // console.log("Jeet Badki Portfolio Loaded | Antigravity Audit");
 
   // State Management
   const state = {
@@ -301,6 +301,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const projectsContainer = document.getElementById("projects-container");
 
   if (projectsContainer) {
+    let projectsHTML = '';
     projectsData.forEach((project, index) => {
       // Dynamic styling based on region/category
       const accentClass = project.regionCode.includes("USA") ? "text-sky-400 border-sky-400" : "text-emerald-400 border-emerald-400";
@@ -384,8 +385,11 @@ document.addEventListener("DOMContentLoaded", () => {
             </div>
         </div>
         `;
-      projectsContainer.innerHTML += html;
+      projectsHTML += html;
     });
+
+    // SECURITY NOTE: projectsData is hardcoded above, so this innerHTML assignment is safe.
+    projectsContainer.innerHTML = projectsHTML;
 
     // Delegation for Accordion
     projectsContainer.addEventListener("click", (e) => {
@@ -444,7 +448,7 @@ document.addEventListener("DOMContentLoaded", () => {
     grabCursor: true,
     on: {
       init: function () {
-        console.log('Testimonial Swiper initialized');
+        // console.log('Testimonial Swiper initialized');
       },
     },
   });
