@@ -2,79 +2,78 @@
 @config "../tailwind.config.js";
 
 @theme {
-    --color-primary: #0b3d5b;
-    --color-secondary: #64748b;
-    --color-accent: #f59e0b;
-    --color-dark: #1e293b;
-    --color-light: #f8fafc;
-    --font-heading: 'Inter', sans-serif;
-    --font-body: 'Inter', sans-serif;
+  --color-primary: #0b3d5b;
+  --color-secondary: #64748b;
+  --color-accent: #f59e0b;
+  --color-dark: #1e293b;
+  --color-light: #f8fafc;
+  --font-heading: "Inter", sans-serif;
+  --font-body: "Inter", sans-serif;
 }
 
 @layer components {
-    .container-custom {
-        @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
-    }
+  .container-custom {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
 
-    .btn-primary {
-        @apply bg-[var(--color-primary)] hover:opacity-90 text-white font-bold py-3 px-8 rounded transition duration-300 ease-in-out transform hover:-translate-y-1 shadow-lg;
-    }
+  .btn-primary {
+    @apply bg-[var(--color-primary)] hover:opacity-90 text-white font-bold py-3 px-8 rounded transition duration-300 ease-in-out transform hover:-translate-y-1 shadow-lg;
+  }
 
-    .section-title {
-        @apply text-3xl md:text-4xl font-bold text-gray-900 mb-4 font-heading;
-    }
+  .section-title {
+    @apply text-3xl md:text-4xl font-bold text-gray-900 mb-4 font-heading;
+  }
 }
 
-
-:root{
-    --swiper-navigation-size: 30px
+:root {
+  --swiper-navigation-size: 30px;
 }
 
 /* Testimonial Swiper Custom Styles */
 .mySwiper {
-    padding-bottom: 50px;
+  padding-bottom: 50px;
 }
 
 .mySwiper .swiper-slide {
-    height: auto;
-    display: flex;
+  height: auto;
+  display: flex;
 }
 
 /* Navigation Buttons */
 #slider-button-left,
 #slider-button-right {
-    transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 #slider-button-left:hover,
 #slider-button-right:hover {
-    transform: scale(1.05);
+  transform: scale(1.05);
 }
 
 /* Swiper Pagination */
 .swiper-pagination {
-    bottom: 10px !important;
+  bottom: 10px !important;
 }
 
 .swiper-pagination-bullet {
-    width: 10px;
-    height: 10px;
-    background: #d1d5db;
-    opacity: 1;
-    transition: all 0.3s ease;
+  width: 10px;
+  height: 10px;
+  background: #d1d5db;
+  opacity: 1;
+  transition: all 0.3s ease;
 }
 
 .dark .swiper-pagination-bullet {
-    background: #475569;
+  background: #475569;
 }
 
 .swiper-pagination-bullet-active {
-    background: #f59e0b;
-    width: 24px;
-    border-radius: 5px;
+  background: #f59e0b;
+  width: 24px;
+  border-radius: 5px;
 }
 
 /* Card Hover Effects */
 .swiper-slide .group {
-    transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }

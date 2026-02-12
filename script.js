@@ -68,19 +68,19 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   };
 
-  const updateActiveLinks = (currentId) => {
-    document.querySelectorAll(".nav-link").forEach((link) => {
-      // Reset all
-      link.classList.remove("text-accent", "font-bold");
-      link.classList.add("text-gray-600", "dark:text-gray-300");
+  // const updateActiveLinks = (currentId) => {
+  //   document.querySelectorAll(".nav-link").forEach((link) => {
+  //     // Reset all
+  //     link.classList.remove("text-accent", "font-bold");
+  //     link.classList.add("text-gray-600", "dark:text-gray-300");
 
-      // Set active
-      if (link.getAttribute("href") === `#${currentId}`) {
-        link.classList.add("text-accent", "font-bold");
-        link.classList.remove("text-gray-600", "dark:text-gray-300");
-      }
-    });
-  };
+  //     // Set active
+  //     if (link.getAttribute("href") === `#${currentId}`) {
+  //       link.classList.add("text-accent", "font-bold");
+  //       link.classList.remove("text-gray-600", "dark:text-gray-300");
+  //     }
+  //   });
+  // };
 
   window.addEventListener("scroll", onScroll);
 
