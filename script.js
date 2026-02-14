@@ -464,7 +464,7 @@ document.addEventListener("DOMContentLoaded", () => {
     if (!daysEl || !hoursEl || !minutesEl || !secondsEl) return;
 
     // Set launch date (e.g., 14 days from now)
-    const launchDate = new Date();
+    const launchDate = new Date("2026-06-01T00:00:00");
     launchDate.setDate(launchDate.getDate() + 14);
 
     const updateTimer = () => {
