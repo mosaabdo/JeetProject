@@ -1,20 +1,19 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   darkMode: "selector",
-  content: ["./*.{html,js}"],
+  content: ["./index.html", "./script.js", "./src/**/*.{html,js}"],
   theme: {
     extend: {
       colors: {
-        primary: "#0f172a", // Deep Slate / Engineering Blue
-        secondary: "#334155", // Slate 700
-        accent: "#f59e0b", // Amber 500 (High vis)
-        dark: "#020617", // Slate 950
+        primary: "#0f172a",
+        secondary: "#334155",
+        accent: "#f59e0b",
+        dark: "#020617",
         light: "#f8fafc",
       },
       fontFamily: {
-        heading: ["Abril Fatface", 'serif'],
+        heading: ["Abril Fatface", "serif"],
         body: ["Inter", "sans-serif"],
-
       },
     },
   },

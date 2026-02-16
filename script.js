@@ -5,15 +5,29 @@ document.addEventListener("DOMContentLoaded", () => {
   const state = {
     isMenuOpen: false,
     currentSection: "",
+    backToTopClickListenerAttached: false,
   };
 
   // DOM Elements
   const navbar = document.getElementById("navbar");
   const backToTopBtn = document.getElementById("back-to-top");
   const sections = document.querySelectorAll("section");
-  const navLinks = document.querySelectorAll("#navbar nav a, #mobile-menu a, #menu-btn");
+  const navLinks = document.querySelectorAll(
+    "#navbar nav a, #mobile-menu a, #menu-btn",
+  );
   const mobileMenu = document.getElementById("mobile-menu");
   const menuBtn = document.getElementById("menu-btn");
+
+  // --- Back to Top Button Setup (Once Only) ---
+  if (backToTopBtn && !state.backToTopClickListenerAttached) {
+    backToTopBtn.addEventListener("click", () => {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+      });
+    });
+    state.backToTopClickListenerAttached = true;
+  }
 
   // --- Optimized Scroll Logic (Throttled via rAF) ---
   let isScrolling = false;
@@ -31,25 +45,31 @@ document.addEventListener("DOMContentLoaded", () => {
   const handleScroll = () => {
     const scrollY = window.scrollY;
 
-    // Back to Top Button
+    // Back to Top Button - Toggle Visibility
     if (backToTopBtn) {
       if (scrollY > 300) {
-        backToTopBtn.classList.remove("opacity-0", "translate-y-10", "pointer-events-none");
-        backToTopBtn.classList.add("opacity-100", "translate-y-0", "pointer-events-auto");
+        backToTopBtn.classList.remove(
+          "opacity-0",
+          "translate-y-10",
+          "pointer-events-none",
+        );
+        backToTopBtn.classList.add(
+          "opacity-100",
+          "translate-y-0",
+          "pointer-events-auto",
+        );
       } else {
-        backToTopBtn.classList.add("opacity-0", "translate-y-10", "pointer-events-none");
-        backToTopBtn.classList.remove("opacity-100", "translate-y-0", "pointer-events-auto");
+        backToTopBtn.classList.add(
+          "opacity-0",
+          "translate-y-10",
+          "pointer-events-none",
+        );
+        backToTopBtn.classList.remove(
+          "opacity-100",
+          "translate-y-0",
+          "pointer-events-auto",
+        );
       }
-    }
-
-
-    if (backToTopBtn) {
-      backToTopBtn.addEventListener("click", () => {
-        window.scrollTo({
-          top: 0,
-          behavior: "smooth"
-        });
-      });
     }
 
     // Scrollspy
@@ -90,30 +110,31 @@ document.addEventListener("DOMContentLoaded", () => {
       state.isMenuOpen = !state.isMenuOpen;
       if (state.isMenuOpen) {
         mobileMenu.classList.remove("hidden");
-        // Animate entrance
-        mobileMenu.animate([
-          { opacity: 0, transform: 'translateY(-10px)' },
-          { opacity: 1, transform: 'translateY(0)' }
-        ], { duration: 200, easing: 'ease-out' });
+        mobileMenu.classList.add("block", "opacity-100");
       } else {
         mobileMenu.classList.add("hidden");
+        mobileMenu.classList.remove("block", "opacity-100");
       }
     };
 
     menuBtn.addEventListener("click", toggleMenu);
 
     // Close on link click
-    mobileMenu.querySelectorAll("a").forEach((link) => {
-      link.addEventListener("click", () => {
-        state.isMenuOpen = false;
-        mobileMenu.classList.add("hidden");
+    if (mobileMenu) {
+      const menuLinks = mobileMenu.querySelectorAll("a");
+      menuLinks.forEach((link) => {
+        link.addEventListener("click", () => {
+          state.isMenuOpen = false;
+          mobileMenu.classList.add("hidden");
+          mobileMenu.classList.remove("block", "opacity-100");
+        });
       });
-    });
+    }
   }
 
   // --- Smooth Scrolling ---
   document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
-    anchor.classList.add('nav-link'); // helper class for Scrollspy
+    anchor.classList.add("nav-link"); // helper class for Scrollspy
     anchor.addEventListener("click", function (e) {
       e.preventDefault();
       const targetId = this.getAttribute("href");
@@ -122,13 +143,13 @@ document.addEventListener("DOMContentLoaded", () => {
       if (target) {
         target.scrollIntoView({
           behavior: "smooth",
-          block: "start"
+          block: "start",
         });
       }
     });
   });
 
-  // --- Dark Mode ---
+  // --- Dark Mode Toggle ---
   const initTheme = () => {
     // Desktop Elements
     const themeToggleBtn = document.getElementById("theme-toggle");
@@ -137,20 +158,36 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Mobile Elements
     const themeToggleBtnMobile = document.getElementById("theme-toggle-mobile");
-    const darkIconMobile = document.getElementById("theme-toggle-dark-icon-mobile");
-    const lightIconMobile = document.getElementById("theme-toggle-light-icon-mobile");
+    const darkIconMobile = document.getElementById(
+      "theme-toggle-dark-icon-mobile",
+    );
+    const lightIconMobile = document.getElementById(
+      "theme-toggle-light-icon-mobile",
+    );
+
+    // Validate elements exist
+    if (!themeToggleBtn && !themeToggleBtnMobile) {
+      console.warn("Theme toggle buttons not found in DOM");
+      return;
+    }
 
     // Local Storage / System Preference
-    if (localStorage.getItem("color-theme") === "dark" || (!("color-theme" in localStorage) && window.matchMedia("(prefers-color-scheme: dark)").matches)) {
+    const isDark =
+      localStorage.getItem("color-theme") === "dark" ||
+      (!("color-theme" in localStorage) &&
+        window.matchMedia("(prefers-color-scheme: dark)").matches);
+
+    if (isDark) {
       document.documentElement.classList.add("dark");
       lightIcon?.classList.remove("hidden");
-      lightIconMobile?.classList.remove("hidden"); // Show sun on mobile
+      lightIconMobile?.classList.remove("hidden");
     } else {
       document.documentElement.classList.remove("dark");
       darkIcon?.classList.remove("hidden");
-      darkIconMobile?.classList.remove("hidden"); // Show moon on mobile
+      darkIconMobile?.classList.remove("hidden");
     }
 
+    // Toggle function
     const toggleTheme = () => {
       // Toggle Desktop Icons
       darkIcon?.classList.toggle("hidden");
@@ -169,16 +206,16 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     };
 
+    // Attach listeners only if elements exist
     themeToggleBtn?.addEventListener("click", toggleTheme);
     themeToggleBtnMobile?.addEventListener("click", toggleTheme);
   };
   initTheme();
 
-
   // --- Intersection Observer for Animations ---
   const observerOptions = {
     threshold: 0.15,
-    rootMargin: "0px 0px -50px 0px"
+    rootMargin: "0px 0px -50px 0px",
   };
 
   const observer = new IntersectionObserver((entries) => {
@@ -192,7 +229,13 @@ document.addEventListener("DOMContentLoaded", () => {
   }, observerOptions);
 
   document.querySelectorAll(".reveal").forEach((el) => {
-    el.classList.add("transition-all", "duration-1000", "ease-out", "opacity-0", "translate-y-10");
+    el.classList.add(
+      "transition-all",
+      "duration-1000",
+      "ease-out",
+      "opacity-0",
+      "translate-y-10",
+    );
     observer.observe(el);
   });
 
@@ -203,7 +246,7 @@ document.addEventListener("DOMContentLoaded", () => {
     if (slides.length > 0) {
       let currentSlide = 0;
       // Initialize first slide
-      slides[0].classList.add('opacity-100', 'scale-110');
+      slides[0].classList.add("opacity-100", "scale-110");
 
       setInterval(() => {
         const nextSlide = (currentSlide + 1) % slides.length;
@@ -233,12 +276,13 @@ document.addEventListener("DOMContentLoaded", () => {
       category: "Industrial",
       cords: "31.76°N 106.45°W",
       complexity: 88,
-      brief: "Supported PMC/TPMC (third‑party CM) services for the R.R. Bustamante WWTP Headworks Improvements program for El Paso Water, delivering a phased capacity increase from 39 MGD to 51 MGD.  Performed daily site rounds, coordinated field inspections and material testing, and verified construction compliance against IFC drawings, specifications, and contract documents; driving QA/QC closure similar to WIR/MIR closeouts used on Indian sites.  Managed RFI/Submittal control in Procore (akin to maintaining a TQ/Submittal Register), maintained stored material/equipment logs, and verified quantities supporting contractor pay applications (RA bill–type checks).  Supported VO/Change Order and contingency documentation by coordinating between the Client, Contractor, and EOR, and monitored baseline vs. actual progress through contractor schedule updates to track the critical path and flag slippages early in weekly PRMs with clear, data‑driven reporting.",
+      brief:
+        "Supported PMC/TPMC (third‑party CM) services for the R.R. Bustamante WWTP Headworks Improvements program for El Paso Water, delivering a phased capacity increase from 39 MGD to 51 MGD.  Performed daily site rounds, coordinated field inspections and material testing, and verified construction compliance against IFC drawings, specifications, and contract documents; driving QA/QC closure similar to WIR/MIR closeouts used on Indian sites.  Managed RFI/Submittal control in Procore (akin to maintaining a TQ/Submittal Register), maintained stored material/equipment logs, and verified quantities supporting contractor pay applications (RA bill–type checks).  Supported VO/Change Order and contingency documentation by coordinating between the Client, Contractor, and EOR, and monitored baseline vs. actual progress through contractor schedule updates to track the critical path and flag slippages early in weekly PRMs with clear, data‑driven reporting.",
       techSpecs: [
         { label: "Capacity Upgrade", value: "39 MGD → 51 MGD" },
         { label: "System Type", value: "Activated Sludge" },
         { label: "Contract Type", value: "PMC / TPMC" },
-      ]
+      ],
     },
     {
       id: "pune-metro",
@@ -250,12 +294,13 @@ document.addEventListener("DOMContentLoaded", () => {
       category: "Transportation",
       cords: "18.52°N 73.85°E",
       complexity: 92,
-      brief: "Execution of elevated and underground corridors for the Pune Metro Rail project. Supervised viaduct precast segment erection and tunneling operations ensuring zero safety incidents.",
+      brief:
+        "Execution of elevated and underground corridors for the Pune Metro Rail project. Supervised viaduct precast segment erection and tunneling operations ensuring zero safety incidents.",
       techSpecs: [
         { label: "Network Length", value: "~33.2 km" },
         { label: "Methodology", value: "Precast Epoxied Segments" },
         { label: "Corridor Type", value: "Elevated & Underground" },
-      ]
+      ],
     },
     {
       id: "bits-goa",
@@ -267,12 +312,13 @@ document.addEventListener("DOMContentLoaded", () => {
       category: "Institutional",
       cords: "15.39°N 73.87°E",
       complexity: 78,
-      brief: "Coordination of student housing expansion, focusing on MEP integration. Managed the installation log for 68 HVAC units and waterproofing systems for a 3-story institutional building.",
+      brief:
+        "Coordination of student housing expansion, focusing on MEP integration. Managed the installation log for 68 HVAC units and waterproofing systems for a 3-story institutional building.",
       techSpecs: [
         { label: "HVAC Units", value: "68 Systems Coordinated" },
         { label: "Structure", value: "3-Story RCC Frame" },
         { label: "Key Scope", value: "Waterproofing & SFRC" },
-      ]
+      ],
     },
     {
       id: "transmission-tower",
@@ -284,12 +330,13 @@ document.addEventListener("DOMContentLoaded", () => {
       category: "Industrial",
       cords: "33.44°N 112.07°W",
       complexity: 65,
-      brief: "Geotechnical planning for tower replacement. Analyzed subsurface constraints to determine foundation suitability and shaft excavation parameters.",
+      brief:
+        "Geotechnical planning for tower replacement. Analyzed subsurface constraints to determine foundation suitability and shaft excavation parameters.",
       techSpecs: [
         { label: "Scope", value: "Foundation Parameters" },
         { label: "Excavation", value: "Shaft Drilling" },
         { label: "Analysis", value: "Subsurface Constraints" },
-      ]
+      ],
     },
     {
       id: "sepc-comms",
@@ -301,22 +348,25 @@ document.addEventListener("DOMContentLoaded", () => {
       category: "Communication Systems",
       cords: "33.42°N 111.93°W",
       complexity: 70,
-      brief: "Structured cabling layout and site logistics for the ASU SEPC facility. Ensured reliability of communication lines through rigorous material staging and pathway coordination.",
+      brief:
+        "Structured cabling layout and site logistics for the ASU SEPC facility. Ensured reliability of communication lines through rigorous material staging and pathway coordination.",
       techSpecs: [
         { label: "System", value: "Structured Cabling" },
         { label: "Focus", value: "Site Logistics" },
         { label: "Reliability", value: "99.9% Up-time Target" },
-      ]
-    }
+      ],
+    },
   ];
 
   const projectsContainer = document.getElementById("projects-container");
 
   if (projectsContainer) {
-    let projectsHTML = '';
+    let projectsHTML = "";
     projectsData.forEach((project, index) => {
       // Dynamic styling based on region/category
-      const accentClass = project.regionCode.includes("USA") ? "text-sky-400 border-sky-400" : "text-emerald-400 border-emerald-400";
+      const accentClass = project.regionCode.includes("USA")
+        ? "text-sky-400 border-sky-400"
+        : "text-emerald-400 border-emerald-400";
 
       const html = `
         <div class="project-row group relative bg-white dark:bg-slate-900 rounded-xl border border-gray-200 dark:border-slate-800 hover:border-accent/50 transition-all duration-300 reveal delay-${index * 100} overflow-hidden shadow-sm hover:shadow-2xl">
@@ -373,12 +423,16 @@ document.addEventListener("DOMContentLoaded", () => {
                     <div class="bg-white dark:bg-slate-900 p-6 rounded-lg border border-gray-200 dark:border-slate-800 shadow-inner">
                         <h4 class="text-xs font-bold uppercase tracking-widest text-gray-400 mb-4 border-b border-gray-200 dark:border-slate-700 pb-2">Technical Specs</h4>
                         <ul class="space-y-3">
-                            ${project.techSpecs.map(spec => `
+                            ${project.techSpecs
+                              .map(
+                                (spec) => `
                                 <li class="flex justify-between items-center text-sm">
                                     <span class="text-gray-500 dark:text-gray-400">${spec.label}</span>
                                     <span class="font-mono font-semibold text-gray-900 dark:text-white">${spec.value}</span>
                                 </li>
-                            `).join('')}
+                            `,
+                              )
+                              .join("")}
                         </ul>
                         
                         <!-- Complexity Bar -->
@@ -433,7 +487,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   // --- Testimonial Swiper Initialization ---
-  const testimonialSwiper = new Swiper('.mySwiper', {
+  const testimonialSwiper = new Swiper(".mySwiper", {
     slidesPerView: 1,
     spaceBetween: 30,
     loop: true,
@@ -443,13 +497,13 @@ document.addEventListener("DOMContentLoaded", () => {
       pauseOnMouseEnter: true,
     },
     speed: 800,
-    effect: 'slide',
+    effect: "slide",
     navigation: {
-      nextEl: '#slider-button-right',
-      prevEl: '#slider-button-left',
+      nextEl: "#slider-button-right",
+      prevEl: "#slider-button-left",
     },
     pagination: {
-      el: '.swiper-pagination',
+      el: ".swiper-pagination",
       clickable: true,
       dynamicBullets: true,
     },
@@ -472,7 +526,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const minutesEl = document.getElementById("minutes");
     const secondsEl = document.getElementById("seconds");
 
-    // Only run if elements exist
+    // Only run if all elements exist
     if (!daysEl || !hoursEl || !minutesEl || !secondsEl) return;
 
     // Set launch date (e.g., 14 days from now)
@@ -493,7 +547,9 @@ document.addEventListener("DOMContentLoaded", () => {
       }
 
       const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const hours = Math.floor(
+        (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60),
+      );
       const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
       const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
@@ -503,9 +559,90 @@ document.addEventListener("DOMContentLoaded", () => {
       secondsEl.innerText = seconds < 10 ? `0${seconds}` : seconds;
     };
 
-    setInterval(updateTimer, 1000);
+    // Store interval ID for cleanup if needed
+    const countdownInterval = setInterval(updateTimer, 1000);
     updateTimer(); // Initial call
+
+    // Optional: Return interval ID for cleanup
+    return countdownInterval;
   };
   initCountdown();
 
+  // --- Contact Form Handler ---
+  const contactForm = document.getElementById("contact-form");
+  if (contactForm) {
+    contactForm.addEventListener("submit", (e) => {
+      e.preventDefault();
+
+      const name = document.getElementById("name");
+      const email = document.getElementById("email");
+      const message = document.getElementById("message");
+      const formMessage = document.getElementById("form-message");
+
+      // Validate inputs
+      if (!name || !email || !message) {
+        console.error("Form elements not found");
+        return;
+      }
+
+      // Basic validation
+      if (!name.value.trim() || !email.value.trim() || !message.value.trim()) {
+        showMessage("Please fill in all fields", "error");
+        return;
+      }
+
+      // Email validation
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!emailRegex.test(email.value)) {
+        showMessage("Please enter a valid email address", "error");
+        return;
+      }
+
+      // Show success message
+      showMessage(
+        "Thank you for your inquiry! I'll get back to you soon.",
+        "success",
+      );
+
+      // Here you can send the form data to a backend via fetch or API call
+      // Example:
+      // fetch('/api/contact', {
+      //   method: 'POST',
+      //   headers: { 'Content-Type': 'application/json' },
+      //   body: JSON.stringify({
+      //     name: name.value,
+      //     email: email.value,
+      //     message: message.value
+      //   })
+      // });
+
+      // Reset form
+      contactForm.reset();
+
+      // Hide message after 3 seconds
+      setTimeout(() => {
+        formMessage.classList.add("hidden");
+      }, 3000);
+    });
+  }
+
+  // Helper function to show form messages
+  const showMessage = (text, type) => {
+    const formMessage = document.getElementById("form-message");
+    if (!formMessage) return;
+
+    formMessage.classList.remove(
+      "hidden",
+      "bg-red-50",
+      "text-red-600",
+      "bg-green-50",
+      "text-green-600",
+    );
+    if (type === "success") {
+      formMessage.classList.add("bg-green-50", "text-green-600");
+    } else if (type === "error") {
+      formMessage.classList.add("bg-red-50", "text-red-600");
+    }
+    formMessage.textContent = text;
+  };
 });

@@ -22,9 +22,6 @@
     crossorigin="anonymous" referrerpolicy="no-referrer" />
   <!-- Swiper CSS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-
-  <link rel="stylesheet" href="./src/input.css">
-  <!-- Subresource Integrity can be added for CDNs if used later -->
 </head>
 
 <body class="bg-gray-50 text-gray-800 font-body antialiased selection:bg-primary selection:text-white">
@@ -100,7 +97,7 @@
 
     <!-- Mobile Menu -->
     <div id="mobile-menu"
-      class="hidden md:hidden bg-white dark:bg-slate-900 border-t border-gray-100 dark:border-slate-800 absolute top-full left-0 w-full shadow-lg">
+      class="hidden md:hidden bg-white dark:bg-slate-900 border-t border-gray-100 dark:border-slate-800 absolute top-full left-0 w-full shadow-lg transition-all duration-300 ease-in-out">
       <div class="container-custom flex flex-col space-y-4 py-4">
         <a href="#about"
           class="text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-white font-medium transition block">About</a>
@@ -1876,6 +1873,7 @@
                 <button type="submit" class="w-full btn-primary text-center">
                   Send Inquiry
                 </button>
+                <div id="form-message" class="hidden p-3 rounded-lg text-sm font-medium"></div>
               </div>
             </form>
           </div>
