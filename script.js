@@ -68,19 +68,19 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   };
 
-  // const updateActiveLinks = (currentId) => {
-  //   document.querySelectorAll(".nav-link").forEach((link) => {
-  //     // Reset all
-  //     link.classList.remove("text-accent", "font-bold");
-  //     link.classList.add("text-gray-600", "dark:text-gray-300");
+  const updateActiveLinks = (currentId) => {
+    document.querySelectorAll(".nav-link").forEach((link) => {
+      // Reset all
+      link.classList.remove("text-accent", "font-bold");
+      link.classList.add("text-gray-600", "dark:text-gray-300");
 
-  //     // Set active
-  //     if (link.getAttribute("href") === `#${currentId}`) {
-  //       link.classList.add("text-accent", "font-bold");
-  //       link.classList.remove("text-gray-600", "dark:text-gray-300");
-  //     }
-  //   });
-  // };
+      // Set active
+      if (link.getAttribute("href") === `#${currentId}`) {
+        link.classList.add("text-accent", "font-bold");
+        link.classList.remove("text-gray-600", "dark:text-gray-300");
+      }
+    });
+  };
 
   window.addEventListener("scroll", onScroll);
 
@@ -130,23 +130,35 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // --- Dark Mode ---
   const initTheme = () => {
+    // Desktop Elements
     const themeToggleBtn = document.getElementById("theme-toggle");
     const darkIcon = document.getElementById("theme-toggle-dark-icon");
     const lightIcon = document.getElementById("theme-toggle-light-icon");
+
+    // Mobile Elements
     const themeToggleBtnMobile = document.getElementById("theme-toggle-mobile");
+    const darkIconMobile = document.getElementById("theme-toggle-dark-icon-mobile");
+    const lightIconMobile = document.getElementById("theme-toggle-light-icon-mobile");
 
     // Local Storage / System Preference
     if (localStorage.getItem("color-theme") === "dark" || (!("color-theme" in localStorage) && window.matchMedia("(prefers-color-scheme: dark)").matches)) {
       document.documentElement.classList.add("dark");
       lightIcon?.classList.remove("hidden");
+      lightIconMobile?.classList.remove("hidden"); // Show sun on mobile
     } else {
       document.documentElement.classList.remove("dark");
       darkIcon?.classList.remove("hidden");
+      darkIconMobile?.classList.remove("hidden"); // Show moon on mobile
     }
 
     const toggleTheme = () => {
+      // Toggle Desktop Icons
       darkIcon?.classList.toggle("hidden");
       lightIcon?.classList.toggle("hidden");
+
+      // Toggle Mobile Icons
+      darkIconMobile?.classList.toggle("hidden");
+      lightIconMobile?.classList.toggle("hidden");
 
       if (document.documentElement.classList.contains("dark")) {
         document.documentElement.classList.remove("dark");

@@ -7,8 +7,20 @@
   --color-accent: #f59e0b;
   --color-dark: #1e293b;
   --color-light: #f8fafc;
-  --font-heading: "Inter", sans-serif;
+  --font-heading: "Abril Fatface", serif;
   --font-body: "Inter", sans-serif;
+}
+
+@layer base {
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-heading;
+  }
 }
 
 @layer components {
@@ -21,7 +33,7 @@
   }
 
   .section-title {
-    @apply text-3xl md:text-4xl font-bold text-gray-900 mb-4 font-heading;
+    @apply text-3xl md:text-4xl font-bold text-gray-900 mb-4;
   }
 }
 

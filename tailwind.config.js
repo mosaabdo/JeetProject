@@ -12,8 +12,9 @@ module.exports = {
         light: "#f8fafc",
       },
       fontFamily: {
-        heading: ["Oswald", "sans-serif"],
+        heading: ["Abril Fatface", 'serif'],
         body: ["Inter", "sans-serif"],
+
       },
     },
   },
