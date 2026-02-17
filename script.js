@@ -95,10 +95,10 @@ document.addEventListener("DOMContentLoaded", () => {
       link.classList.add("text-gray-600", "dark:text-gray-300");
 
       // Set active
-      if (link.getAttribute("href") === `#${currentId}`) {
-        link.classList.add("text-accent", "font-bold");
-        link.classList.remove("text-gray-600", "dark:text-gray-300");
-      }
+      // if (link.getAttribute("href") === `#${currentId}`) {
+      //   link.classList.add("text-accent", "font-bold");
+      //   link.classList.remove("text-gray-600", "dark:text-gray-300");
+      // }
     });
   };
 
