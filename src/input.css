@@ -7,12 +7,11 @@
   --color-accent: #f59e0b;
   --color-dark: #1e293b;
   --color-light: #f8fafc;
-  --font-heading: "Abril Fatface", serif;
+  --font-heading: "Oswald", sans-serif;
   --font-body: "Inter", sans-serif;
 }
 
 @layer base {
-
   h1,
   h2,
   h3,
