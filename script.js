@@ -424,15 +424,15 @@ document.addEventListener("DOMContentLoaded", () => {
                         <h4 class="text-xs font-bold uppercase tracking-widest text-gray-400 mb-4 border-b border-gray-200 dark:border-slate-700 pb-2">Technical Specs</h4>
                         <ul class="space-y-3">
                             ${project.techSpecs
-                              .map(
-                                (spec) => `
+          .map(
+            (spec) => `
                                 <li class="flex justify-between items-center text-sm">
                                     <span class="text-gray-500 dark:text-gray-400">${spec.label}</span>
                                     <span class="font-mono font-semibold text-gray-900 dark:text-white">${spec.value}</span>
                                 </li>
                             `,
-                              )
-                              .join("")}
+          )
+          .join("")}
                         </ul>
                         
                         <!-- Complexity Bar -->
@@ -568,81 +568,74 @@ document.addEventListener("DOMContentLoaded", () => {
   };
   initCountdown();
 
-  // --- Contact Form Handler ---
+  // =============================
+  // EmailJS Configuration
+  // =============================
+  const SERVICE_ID = "service_mk2xqeg";
+  const TEMPLATE_ID = "template_qmlf8zk";
+  const PUBLIC_KEY = "EvFNHOMOTv7KHVbG_";
+
+  // Initialize EmailJS safely
+  if (typeof emailjs !== "undefined") {
+    try {
+      emailjs.init({
+        publicKey: PUBLIC_KEY,
+      });
+    } catch (e) {
+      console.warn("Retrying emailjs.init with string (legacy mode)", e);
+      emailjs.init(PUBLIC_KEY);
+    }
+  } else {
+    console.error("EmailJS script is not loaded.");
+  }
+
   const contactForm = document.getElementById("contact-form");
+  const formMessage = document.getElementById("form-message");
+
   if (contactForm) {
-    contactForm.addEventListener("submit", (e) => {
+    contactForm.addEventListener("submit", function (e) {
       e.preventDefault();
 
-      const name = document.getElementById("name");
-      const email = document.getElementById("email");
-      const message = document.getElementById("message");
-      const formMessage = document.getElementById("form-message");
+      const button = contactForm.querySelector("button[type='submit']");
+      const originalText = button.textContent;
 
-      // Validate inputs
-      if (!name || !email || !message) {
-        console.error("Form elements not found");
-        return;
-      }
+      button.textContent = "Sending...";
+      button.disabled = true;
 
-      // Basic validation
-      if (!name.value.trim() || !email.value.trim() || !message.value.trim()) {
-        showMessage("Please fill in all fields", "error");
-        return;
-      }
-
-      // Email validation
-      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-      if (!emailRegex.test(email.value)) {
-        showMessage("Please enter a valid email address", "error");
-        return;
-      }
-
-      // Show success message
-      showMessage(
-        "Thank you for your inquiry! I'll get back to you soon.",
-        "success",
-      );
-
-      // Here you can send the form data to a backend via fetch or API call
-      // Example:
-      // fetch('/api/contact', {
-      //   method: 'POST',
-      //   headers: { 'Content-Type': 'application/json' },
-      //   body: JSON.stringify({
-      //     name: name.value,
-      //     email: email.value,
-      //     message: message.value
-      //   })
-      // });
-
-      // Reset form
-      contactForm.reset();
-
-      // Hide message after 3 seconds
-      setTimeout(() => {
+      // Hide previous messages
+      if (formMessage) {
         formMessage.classList.add("hidden");
-      }, 3000);
+        formMessage.className = "hidden p-3 rounded-lg text-sm font-medium"; // Reset classes
+      }
+
+      emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, contactForm)
+        .then(() => {
+          if (formMessage) {
+            formMessage.textContent = "Message sent successfully ✅";
+            formMessage.classList.remove("hidden");
+            formMessage.classList.add("bg-green-100", "text-green-700", "dark:bg-green-900/30", "dark:text-green-400");
+          } else {
+            alert("Message sent successfully ✅");
+          }
+          contactForm.reset();
+        })
+        .catch((error) => {
+          console.error("EmailJS Failed:", error);
+          const errorMsg = typeof error === 'object' ? JSON.stringify(error) : error;
+
+          if (formMessage) {
+            formMessage.textContent = "Something went wrong. Please try again later.";
+            formMessage.classList.remove("hidden");
+            formMessage.classList.add("bg-red-100", "text-red-700", "dark:bg-red-900/30", "dark:text-red-400");
+          } else {
+            alert("EmailJS Failed: " + errorMsg);
+          }
+        })
+        .finally(() => {
+          button.textContent = originalText;
+          button.disabled = false;
+        });
     });
   }
 
-  // Helper function to show form messages
-  const showMessage = (text, type) => {
-    const formMessage = document.getElementById("form-message");
-    if (!formMessage) return;
-
-    formMessage.classList.remove(
-      "hidden",
-      "bg-red-50",
-      "text-red-600",
-      "bg-green-50",
-      "text-green-600",
-    );
-    if (type === "success") {
-      formMessage.classList.add("bg-green-50", "text-green-600");
-    } else if (type === "error") {
-      formMessage.classList.add("bg-red-50", "text-red-600");
-    }
-    formMessage.textContent = text;
-  };
 });
