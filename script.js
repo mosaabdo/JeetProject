@@ -508,4 +508,59 @@ document.addEventListener("DOMContentLoaded", () => {
   };
   initCountdown();
 
+  // =============================
+  // EmailJS Configuration
+  // =============================
+  const SERVICE_ID = "service_mk2xqeg";
+  const TEMPLATE_ID = "template_qmlf8zk";
+  const PUBLIC_KEY = "EvFNHOMOTv7KHVbG_";
+
+  // Initialize EmailJS safely
+  if (typeof emailjs !== "undefined") {
+    try {
+      emailjs.init({
+        publicKey: PUBLIC_KEY,
+      });
+    } catch (e) {
+      console.warn("Retrying emailjs.init with string (legacy mode)", e);
+      emailjs.init(PUBLIC_KEY);
+    }
+  } else {
+    console.error("EmailJS script is not loaded.");
+  }
+
+  const contactForm = document.getElementById("contact-form");
+
+  if (contactForm) {
+    contactForm.addEventListener("submit", function (e) {
+      e.preventDefault();
+
+
+
+      const button = contactForm.querySelector("button[type='submit']");
+      const originalText = button.textContent;
+
+      button.textContent = "Sending...";
+      button.disabled = true;
+
+      emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, contactForm)
+        .then(() => {
+          alert("Message sent successfully ✅");
+          contactForm.reset();
+        })
+        .catch((error) => {
+          console.error("EmailJS Failed:", error);
+          const errorMsg = typeof error === 'object' ? JSON.stringify(error) : error;
+          alert("EmailJS Failed: " + errorMsg + "\nPlease check the console for more details.");
+        })
+        .finally(() => {
+          button.textContent = originalText;
+          button.disabled = false;
+        });
+    });
+  }
+
 });
+
+
+
