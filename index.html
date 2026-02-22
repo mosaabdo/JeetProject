@@ -1644,11 +1644,10 @@
 
             <!-- Email Subscription -->
             <div class="max-w-md mx-auto mb-20">
-              <form class="flex gap-2"
-                onsubmit="event.preventDefault(); alert('Thank you! You will be notified when we launch.');">
-                <input type="email" placeholder="Enter your email for updates..." required
+              <form id="subscribe-form" class="flex gap-2">
+                <input type="email" id="subscriber_email" name="subscriber_email" placeholder="Enter your email for updates..." required
                   class="flex-1 px-5 py-3 rounded-full border border-gray-300 dark:border-slate-700 bg-white dark:bg-slate-900 focus:ring-2 focus:ring-accent outline-none transition-all w-full shadow-sm text-gray-900 dark:text-white placeholder-gray-400">
-                <button type="submit"
+                <button type="submit" id="subscribe-btn"
                   class="px-6 py-3 bg-accent hover:bg-amber-600 text-white font-bold rounded-full shadow-lg shadow-accent/20 transition-all duration-300 hover:-translate-y-1 whitespace-nowrap">
                   Notify Me
                 </button>

@@ -424,15 +424,15 @@ document.addEventListener("DOMContentLoaded", () => {
                         <h4 class="text-xs font-bold uppercase tracking-widest text-gray-400 mb-4 border-b border-gray-200 dark:border-slate-700 pb-2">Technical Specs</h4>
                         <ul class="space-y-3">
                             ${project.techSpecs
-          .map(
-            (spec) => `
+                              .map(
+                                (spec) => `
                                 <li class="flex justify-between items-center text-sm">
                                     <span class="text-gray-500 dark:text-gray-400">${spec.label}</span>
                                     <span class="font-mono font-semibold text-gray-900 dark:text-white">${spec.value}</span>
                                 </li>
                             `,
-          )
-          .join("")}
+                              )
+                              .join("")}
                         </ul>
                         
                         <!-- Complexity Bar -->
@@ -571,9 +571,9 @@ document.addEventListener("DOMContentLoaded", () => {
   // =============================
   // EmailJS Configuration
   // =============================
-  const SERVICE_ID = "service_mk2xqeg";
-  const TEMPLATE_ID = "template_qmlf8zk";
-  const PUBLIC_KEY = "EvFNHOMOTv7KHVbG_";
+  const SERVICE_ID = "service_go0c5jy";
+  const TEMPLATE_ID = "template_2okcwny";
+  const PUBLIC_KEY = "4tCe1aWC_S_r4_T6A";
 
   // Initialize EmailJS safely
   if (typeof emailjs !== "undefined") {
@@ -608,12 +608,18 @@ document.addEventListener("DOMContentLoaded", () => {
         formMessage.className = "hidden p-3 rounded-lg text-sm font-medium"; // Reset classes
       }
 
-      emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, contactForm)
+      emailjs
+        .sendForm(SERVICE_ID, TEMPLATE_ID, contactForm)
         .then(() => {
           if (formMessage) {
             formMessage.textContent = "Message sent successfully ✅";
             formMessage.classList.remove("hidden");
-            formMessage.classList.add("bg-green-100", "text-green-700", "dark:bg-green-900/30", "dark:text-green-400");
+            formMessage.classList.add(
+              "bg-green-100",
+              "text-green-700",
+              "dark:bg-green-900/30",
+              "dark:text-green-400",
+            );
           } else {
             alert("Message sent successfully ✅");
           }
@@ -621,12 +627,19 @@ document.addEventListener("DOMContentLoaded", () => {
         })
         .catch((error) => {
           console.error("EmailJS Failed:", error);
-          const errorMsg = typeof error === 'object' ? JSON.stringify(error) : error;
+          const errorMsg =
+            typeof error === "object" ? JSON.stringify(error) : error;
 
           if (formMessage) {
-            formMessage.textContent = "Something went wrong. Please try again later.";
+            formMessage.textContent =
+              "Something went wrong. Please try again later.";
             formMessage.classList.remove("hidden");
-            formMessage.classList.add("bg-red-100", "text-red-700", "dark:bg-red-900/30", "dark:text-red-400");
+            formMessage.classList.add(
+              "bg-red-100",
+              "text-red-700",
+              "dark:bg-red-900/30",
+              "dark:text-red-400",
+            );
           } else {
             alert("EmailJS Failed: " + errorMsg);
           }
@@ -637,5 +650,37 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
   }
-
 });
+// =============================
+// Subscribe Form Handling
+// =============================
+const subscribeForm = document.getElementById("subscribe-form");
+const subscribeBtn = document.getElementById("subscribe-btn");
+
+const SUBSCRIBE_SERVICE_ID = "service_go0c5jy";
+const SUBSCRIBE_TEMPLATE_ID = "template_gv96n36";
+
+if (subscribeForm) {
+  subscribeForm.addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    const originalText = subscribeBtn.innerText;
+    subscribeBtn.innerText = "Sending...";
+    subscribeBtn.disabled = true;
+
+    emailjs
+      .sendForm(SUBSCRIBE_SERVICE_ID, SUBSCRIBE_TEMPLATE_ID, this)
+      .then(() => {
+        alert("Thank you! You will be notified when we launch.");
+        subscribeForm.reset();
+      })
+      .catch((error) => {
+        console.error("Error sending subscription:", error);
+        alert("Oops! Something went wrong. Please try again later.");
+      })
+      .finally(() => {
+        subscribeBtn.innerText = originalText;
+        subscribeBtn.disabled = false;
+      });
+  });
+}
