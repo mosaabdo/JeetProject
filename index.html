@@ -11,7 +11,7 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
- <link
+  <link
     href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Oswald:wght@400;500;700&display=swap"
     rel="stylesheet" />
 
@@ -176,6 +176,132 @@
         </div>
       </div>
     </section>
+
+    <!-- About Me Section -->
+    <section id="about-me"
+      class="py-32 bg-white dark:bg-slate-900 relative overflow-hidden transition-colors duration-300">
+
+      <!-- Blueprint Grid Background -->
+      <div class="absolute inset-0 z-0 opacity-[0.03] dark:opacity-[0.05]"
+        style="background-image: linear-gradient(#0f172a 1px, transparent 1px), linear-gradient(to right, #0f172a 1px, transparent 1px); background-size: 40px 40px;">
+      </div>
+
+      <!-- Top Divider -->
+      <div
+        class="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-slate-300 dark:via-slate-700 to-transparent">
+      </div>
+
+      <div class="container-custom relative z-10">
+
+        <!-- Section Header (same pattern as Portfolio / Testimonials) -->
+        <div class="reveal text-center max-w-4xl mx-auto mb-20">
+          <div
+            class="inline-flex items-center gap-2 px-3 py-1 bg-white dark:bg-slate-800 border border-gray-200 dark:border-slate-700 rounded-full text-xs font-mono font-bold text-accent tracking-widest uppercase mb-4 shadow-sm">
+            <span class="w-2 h-2 rounded-full bg-accent animate-pulse"></span>
+            About Me
+          </div>
+          <h2 class="text-3xl md:text-4xl font-heading font-bold text-slate-900 dark:text-white mb-6">
+            Driven by <span
+              class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-blue-600 dark:from-sky-400 dark:to-emerald-400">Excellence</span>
+          </h2>
+          <p class="text-secondary dark:text-slate-400 text-md leading-relaxed max-w-2xl mx-auto">
+            Transforming ambitious concepts into tangible reality through professional civil engineering and
+            construction management across continents.
+          </p>
+        </div>
+
+        <!-- Two-Column Layout using flex -->
+        <div class="flex flex-col lg:flex-row-reverse gap-10 lg:gap-14 items-center">
+
+          <!-- Images Column (wider - takes ~60%) -->
+          <div class="w-full lg:w-3/5 reveal relative">
+            <div class="grid grid-cols-2 gap-4 relative z-10">
+              <!-- Left stack: 2 images -->
+              <div class="space-y-4">
+                <div class="rounded-2xl overflow-hidden shadow-xl border border-gray-100 dark:border-slate-700">
+                  <img src="assets/about/Global%20expertise%20local%20impact-1.jpg" alt="Global Expertise"
+                    class="w-full h-auto object-cover hover:scale-105 transition-transform duration-700 ease-out" />
+                </div>
+                <div class="rounded-2xl overflow-hidden shadow-xl border border-gray-100 dark:border-slate-700">
+                  <img src="assets/about/Expertise%20%26%20Skills.jpg" alt="Expertise and Skills"
+                    class="w-full h-auto object-cover hover:scale-105 transition-transform duration-700 ease-out" />
+                </div>
+              </div>
+              <!-- Right: 1 tall image -->
+              <div class="h-full">
+                <div
+                  class="rounded-2xl overflow-hidden shadow-2xl border border-gray-100 dark:border-slate-700 w-full h-full">
+                  <img src="assets/about/Hero%20Section.jpg" alt="Jeet Badki"
+                    class="w-full h-full object-cover hover:scale-105 transition-transform duration-700 ease-out" />
+                </div>
+              </div>
+            </div>
+
+            <!-- Floating Experience Badge -->
+            <div
+              class="absolute -bottom-5 left-6 md:left-10 bg-white dark:bg-slate-800 px-5 py-4 rounded-2xl shadow-2xl border border-gray-100 dark:border-slate-700 flex items-center gap-4 z-20">
+              <div
+                class="w-12 h-12 bg-gradient-to-br from-accent to-amber-600 text-white rounded-xl flex items-center justify-center text-xl shadow-inner">
+                <i class="fas fa-hard-hat"></i>
+              </div>
+              <div>
+                <div class="text-xs text-gray-500 dark:text-gray-400 font-semibold uppercase tracking-wider">Civil
+                  Engineering</div>
+                <div class="font-bold text-gray-900 dark:text-white text-base">Innovator</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Text Column (narrower - takes ~40%) -->
+          <div class="w-full lg:w-2/5 reveal">
+            <p class="text-gray-600 dark:text-gray-400 text-lg leading-relaxed mb-6">
+              I am <strong class="text-gray-900 dark:text-white">Jeet Badki</strong>, a dedicated Civil Engineer who
+              thrives on transforming ambitious concepts into tangible reality. My journey across multiple continents
+              has
+              equipped me with a unique perspective on infrastructure development.
+            </p>
+            <p class="text-gray-600 dark:text-gray-400 text-lg leading-relaxed mb-8">
+              From heavy civil constructions to smart urban facilities, I leverage modern technology and seasoned
+              expertise to ensure that every project is a benchmark in quality and sustainability.
+            </p>
+
+            <ul class="space-y-4 mb-10">
+              <li class="flex items-start gap-3 text-gray-700 dark:text-gray-300">
+                <span
+                  class="mt-1 w-6 h-6 shrink-0 bg-accent/10 text-accent rounded-full flex items-center justify-center text-xs">
+                  <i class="fas fa-check"></i>
+                </span>
+                <span>Global Perspective &amp; Local Adaptability</span>
+              </li>
+              <li class="flex items-start gap-3 text-gray-700 dark:text-gray-300">
+                <span
+                  class="mt-1 w-6 h-6 shrink-0 bg-accent/10 text-accent rounded-full flex items-center justify-center text-xs">
+                  <i class="fas fa-check"></i>
+                </span>
+                <span>Sustainable Practices &amp; Safety First</span>
+              </li>
+              <li class="flex items-start gap-3 text-gray-700 dark:text-gray-300">
+                <span
+                  class="mt-1 w-6 h-6 shrink-0 bg-accent/10 text-accent rounded-full flex items-center justify-center text-xs">
+                  <i class="fas fa-check"></i>
+                </span>
+                <span>Advanced Project Controls &amp; BIM</span>
+              </li>
+            </ul>
+
+            <a href="#about"
+              class="group relative inline-flex px-7 py-3.5 bg-accent text-slate-900 font-bold rounded-lg shadow-lg hover:shadow-amber-500/20 transition-all duration-300 overflow-hidden items-center gap-2">
+              <span class="relative z-10">Discover My Expertise</span>
+              <i class="fas fa-arrow-down relative z-10 group-hover:translate-y-1 transition-transform"></i>
+              <div
+                class="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section id="about"
       class="py-32 bg-slate-50 dark:bg-slate-950 relative overflow-hidden transition-colors duration-300">
       <div class="container-custom">
@@ -207,7 +333,8 @@
                 </path>
               </svg>
             </div>
-            <h3 class="text-xl font-bold mb-4 text-gray-900 dark:text-white group-hover:text-accent dark:group-hover:text-accent transition-colors">
+            <h3
+              class="text-xl font-bold mb-4 text-gray-900 dark:text-white group-hover:text-accent dark:group-hover:text-accent transition-colors">
               Industrial & Urban Infrastructure
             </h3>
             <p class="text-gray-600 dark:text-gray-300 text-sm mb-4">
@@ -231,7 +358,8 @@
                 </path>
               </svg>
             </div>
-            <h3 class="text-xl font-bold mb-4 text-gray-900 dark:text-white group-hover:text-accent dark:group-hover:text-accent transition-colors">
+            <h3
+              class="text-xl font-bold mb-4 text-gray-900 dark:text-white group-hover:text-accent dark:group-hover:text-accent transition-colors">
               Project Controls & Quality
             </h3>
             <p class="text-gray-600 dark:text-gray-300 text-sm mb-4">
@@ -254,7 +382,8 @@
                 </path>
               </svg>
             </div>
-           <h3 class="text-xl font-bold mb-4 text-gray-900 dark:text-white group-hover:text-accent dark:group-hover:text-accent transition-colors">
+            <h3
+              class="text-xl font-bold mb-4 text-gray-900 dark:text-white group-hover:text-accent dark:group-hover:text-accent transition-colors">
               Modern Execution & BIM
             </h3>
             <p class="text-gray-600 dark:text-gray-300 text-sm mb-4">
@@ -929,9 +1058,11 @@
                           </svg>
                         </div>
                         <div class="grid gap-1">
-                          <h5 class="text-gray-900 dark:text-white font-medium transition-all duration-500  "> Jacobs Engineering Grp.
+                          <h5 class="text-gray-900 dark:text-white font-medium transition-all duration-500  "> Jacobs
+                            Engineering Grp.
                             Inc.</h5>
-                          <span class="text-sm leading-6 text-gray-500 dark:text-gray-400">Senior CEI Project Manager </span>
+                          <span class="text-sm leading-6 text-gray-500 dark:text-gray-400">Senior CEI Project Manager
+                          </span>
                         </div>
                       </div>
                       <div class="flex items-center mb-2 sm:mb-9 gap-2 text-amber-500 transition-all duration-500  ">
@@ -1645,7 +1776,8 @@
             <!-- Email Subscription -->
             <div class="max-w-md mx-auto mb-20">
               <form id="subscribe-form" class="flex gap-2">
-                <input type="email" id="subscriber_email" name="subscriber_email" placeholder="Enter your email for updates..." required
+                <input type="email" id="subscriber_email" name="subscriber_email"
+                  placeholder="Enter your email for updates..." required
                   class="flex-1 px-5 py-3 rounded-full border border-gray-300 dark:border-slate-700 bg-white dark:bg-slate-900 focus:ring-2 focus:ring-accent outline-none transition-all w-full shadow-sm text-gray-900 dark:text-white placeholder-gray-400">
                 <button type="submit" id="subscribe-btn"
                   class="px-6 py-3 bg-accent hover:bg-amber-600 text-white font-bold rounded-full shadow-lg shadow-accent/20 transition-all duration-300 hover:-translate-y-1 whitespace-nowrap">
@@ -1956,7 +2088,8 @@
         </div>
         <div class="flex flex-col md:flex-row items-center gap-4 text-center md:text-right">
           <span class="text-[11px] uppercase tracking-widest opacity-60">Designed for Excellence Built by
-            <span class="text-gray-300 not-italic font-medium hover:text-accent"><a href="https://github.com/mosaabdo"  target="_blank">MousaAbdo</a></span></span>
+            <span class="text-gray-300 not-italic font-medium hover:text-accent"><a href="https://github.com/mosaabdo"
+                target="_blank">MousaAbdo</a></span></span>
         </div>
       </div>
     </div>
