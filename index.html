@@ -1429,8 +1429,79 @@
             </p>
           </div>
 
+          <div class="mb-8">
+            <style>
+              .accordion-container {
+                display: flex;
+                align-items: center;
+                gap: 0.5rem;
+                height: 400px;
+                width: 100%;
+                max-width: 56rem;
+                margin: 2.5rem auto 0;
+              }
+
+              .accordion-panel {
+                flex: 1;
+                transition: all 0.5s ease-in-out;
+                border-radius: 0.5rem;
+                overflow: hidden;
+                height: 400px;
+                cursor: pointer;
+              }
+
+              .accordion-container:hover .accordion-panel {
+                flex: 0.5;
+              }
+
+              .accordion-container .accordion-panel:hover {
+                flex: 3;
+              }
+
+              .accordion-panel img {
+                /* width: 56rem; */
+                /* min-width: 56rem; */
+                height: 100%;
+                object-fit: cover;
+                object-position: center;
+              }
+            </style>
+            <div class="accordion-container">
+              <div class="accordion-panel">
+                <img
+                  src="./assets/collaborationsImage/1.jpeg"
+                  alt="image">
+              </div>
+              <div class="accordion-panel">
+                <img
+                  src="./assets/collaborationsImage/2.jpeg"
+                  alt="image">
+              </div>
+              <div class="accordion-panel">
+                <img
+                  src="./assets/collaborationsImage/3.jpeg"
+                  alt="image">
+              </div>
+              <div class="accordion-panel">
+                <img
+                  src="./assets/collaborationsImage/4.jpeg"
+                  alt="image">
+              </div>
+              <div class="accordion-panel">
+                <img
+                  src="./assets/collaborationsImage/5.jpeg"
+                  alt="image">
+              </div>
+              <div class="accordion-panel">
+                <img
+                  src="./assets/collaborationsImage/6.jpeg"
+                  alt="image">
+              </div>
+            </div>
+          </div>
+
           <!-- Grid -->
-          <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-6">
+          <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-6 ">
 
             <!-- Card Template -->
             <!-- 1. GoM -->
