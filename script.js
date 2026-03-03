@@ -277,9 +277,9 @@ document.addEventListener("DOMContentLoaded", () => {
       cords: "31.76°N 106.45°W",
       complexity: 88,
       brief:
-        "Supported PMC/TPMC (third‑party CM) services for the R.R. Bustamante WWTP Headworks Improvements program for El Paso Water, delivering a phased capacity increase from 39 MGD to 51 MGD.  Performed daily site rounds, coordinated field inspections and material testing, and verified construction compliance against IFC drawings, specifications, and contract documents; driving QA/QC closure similar to WIR/MIR closeouts used on Indian sites.  Managed RFI/Submittal control in Procore (akin to maintaining a TQ/Submittal Register), maintained stored material/equipment logs, and verified quantities supporting contractor pay applications (RA bill–type checks).  Supported VO/Change Order and contingency documentation by coordinating between the Client, Contractor, and EOR, and monitored baseline vs. actual progress through contractor schedule updates to track the critical path and flag slippages early in weekly PRMs with clear, data‑driven reporting.",
+        "Supported PMC/TPMC (third‑party CM) services for the R.R. Bustamante WWTP Headworks Improvements program for El Paso Water, delivering a phased capacity increase from 39 MGD to 52 MGD.  Performed daily site report, coordinated field inspections and material testing, and verified construction compliance against IFC drawings, specifications, and contract documents; driving QA/QC closure similar to WIR/MIR closeouts used on Indian sites.  Managed RFI/Submittal control in Procore (akin to maintaining a TQ/Submittal Register), maintained stored material/equipment logs, and verified quantities supporting contractor pay applications (RA bill–type checks).  Supported VO/Change Order and contingency documentation by coordinating between the Client, Contractor, and EOR, and monitored baseline vs. actual progress through contractor schedule updates to track the critical path and flag slippages early in weekly PRMs with clear, data‑driven reporting.",
       techSpecs: [
-        { label: "Capacity Upgrade", value: "39 MGD → 51 MGD" },
+        { label: "Capacity Upgrade", value: "39 MGD → 52 MGD" },
         { label: "System Type", value: "Activated Sludge" },
         { label: "Contract Type", value: "PMC / TPMC" },
       ],
@@ -295,10 +295,10 @@ document.addEventListener("DOMContentLoaded", () => {
       cords: "18.52°N 73.85°E",
       complexity: 92,
       brief:
-        "Execution of elevated and underground corridors for the Pune Metro Rail project. Supervised viaduct precast segment erection and tunneling operations ensuring zero safety incidents.",
+        "Supervised viaduct segment deliveries and erection activities while supporting tunneling and station excavation operations. Ensured strict safety and protocol compliance through regular inspections, achieving a zero‑fatality record. Monitored adherence to codes, QA/QC standards, and project specifications, and assisted project controls with quantity take‑offs and material procurement tracking.",
       techSpecs: [
         { label: "Network Length", value: "~33.2 km" },
-        { label: "Methodology", value: "Precast Epoxied Segments" },
+        { label: "Methodology", value: "Precast Segments" },
         { label: "Corridor Type", value: "Elevated & Underground" },
       ],
     },
@@ -313,9 +313,9 @@ document.addEventListener("DOMContentLoaded", () => {
       cords: "15.39°N 73.87°E",
       complexity: 78,
       brief:
-        "Coordination of student housing expansion, focusing on MEP integration. Managed the installation log for 68 HVAC units and waterproofing systems for a 3-story institutional building.",
+        "Coordination of student housing expansion, focusing on MEP integration. Managed the procurement and installation log for 68 HVAC units and waterproofing systems for a 3-story institutional building.",
       techSpecs: [
-        { label: "HVAC Units", value: "68 Systems Coordinated" },
+        { label: "Focus-HVAC ", value: "Procurement " },
         { label: "Structure", value: "3-Story RCC Frame" },
         { label: "Key Scope", value: "Waterproofing & SFRC" },
       ],
@@ -323,7 +323,7 @@ document.addEventListener("DOMContentLoaded", () => {
     {
       id: "transmission-tower",
       title: "Transmission Tower Replacement",
-      impactMetric: "Power Infra",
+      impactMetric: "Power Infrastructure",
       regionCode: "PHX / USA",
       timeline: "2023",
       role: "Associate",
@@ -331,16 +331,16 @@ document.addEventListener("DOMContentLoaded", () => {
       cords: "33.44°N 112.07°W",
       complexity: 65,
       brief:
-        "Geotechnical planning for tower replacement. Analyzed subsurface constraints to determine foundation suitability and shaft excavation parameters.",
+        "Geotechnical planning for tower replacement. Analyzed subsurface constraints to determine foundation suitability and shaft excavation parameters for deep foundation construction of a transmission tower structure.",
       techSpecs: [
-        { label: "Scope", value: "Foundation Parameters" },
-        { label: "Excavation", value: "Shaft Drilling" },
+        { label: "Scope", value: "Foundation Selection" },
+        { label: "Excavation", value: "Drill Shaft" },
         { label: "Analysis", value: "Subsurface Constraints" },
       ],
     },
     {
       id: "sepc-comms",
-      title: "ASU SEPC Logistics",
+      title: "ASU SEPC Logistics Planning",
       impactMetric: "Underground Utilities",
       regionCode: "PHX/USA",
       timeline: "2023",
@@ -349,11 +349,11 @@ document.addEventListener("DOMContentLoaded", () => {
       cords: "33.42°N 111.93°W",
       complexity: 70,
       brief:
-        "Structured cabling layout and site logistics for the ASU SEPC facility. Ensured reliability of communication lines through rigorous material staging and pathway coordination.",
+        "Structured a cabling layout and site logistics plan for the ASU Polytechnic SEPC facility. Ensured reliability of communication lines through rigorous material staging and pathway coordination through a busy college campus for construction site operations.",
       techSpecs: [
-        { label: "System", value: "Structured Cabling" },
+        { label: "System", value: "Communication lines" },
         { label: "Focus", value: "Site Logistics" },
-        { label: "Reliability", value: "99.9% Up-time Target" },
+        { label: "Scope", value: "Site logistics planning" },
       ],
     },
   ];
