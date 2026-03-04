@@ -299,7 +299,7 @@ document.addEventListener("DOMContentLoaded", () => {
       techSpecs: [
         { label: "Network Length", value: "~33.2 km" },
         { label: "Methodology", value: "Precast Segments" },
-        { label: "Corridor Type", value: "Elevated & Underground" },
+        { label: "Corridor Type", value: "Elevated" },
       ],
     },
     {
